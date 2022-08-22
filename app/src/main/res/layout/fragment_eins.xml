@@ -39,6 +39,7 @@
         android:layout_marginTop="24dp"
         android:text="Starte Fahrrad fahren"
         android:textSize="20sp"
+        app:iconTint="#A7E1E8"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
