@@ -7,6 +7,7 @@
   <fragment
       android:id="@+id/startFragment"
       android:name="com.example.mywourkout.ui.StartFragment"
+      tools:layout="@layout/fragment_start"
       android:label="StartFragment" >
     <action
         android:id="@+id/action_startFragment_to_fragmentEins"
@@ -15,14 +16,19 @@
   <fragment
       android:id="@+id/fragmentEins"
       android:name="com.example.mywourkout.ui.FragmentEins"
+      tools:layout="@layout/fragment_eins"
       android:label="FragmentEins" >
     <action
         android:id="@+id/action_fragmentEins_to_fragmentZwei"
         app:destination="@id/fragmentZwei" />
+    <action
+        android:id="@+id/action_fragmentEins_to_startFragment"
+        app:destination="@id/startFragment" />
   </fragment>
   <fragment
       android:id="@+id/fragmentZwei"
       android:name="com.example.mywourkout.ui.FragmentZwei"
+      tools:layout="@layout/fragment_zwei"
       android:label="FragmentZwei" >
     <action
         android:id="@+id/action_fragmentZwei_to_startFragment"

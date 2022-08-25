@@ -21,49 +21,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/hintergrund" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="320dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="24dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workout_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fitness_image2" />
+        app:spanCount="2"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:itemCount="10"
+        tools:listitem="@layout/list_item" />
 
-    <Button
-        android:id="@+id/start_fahrrad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Starte Fahrrad fahren"
-        android:textSize="20sp"
-        app:iconTint="#A7E1E8"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/bein_image"
-        android:layout_width="344dp"
-        android:layout_height="219dp"
-        android:layout_marginTop="24dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/start_fahrrad"
-        app:srcCompat="@drawable/fitness_image5" />
-
-    <Button
-        android:id="@+id/bei_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Starte Bein Training"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/bein_image"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/bein_image"
-        app:layout_constraintTop_toBottomOf="@+id/bein_image" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
