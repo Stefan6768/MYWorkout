@@ -13,8 +13,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="729dp"
-        android:layout_height="1122dp"
+        android:layout_width="615dp"
+        android:layout_height="910dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,11 +67,11 @@
         android:id="@+id/home_button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="160dp"
+        android:layout_marginEnd="108dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toStartOf="@+id/menue_button2"
         app:layout_constraintTop_toTopOf="@+id/toolbar5"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.09"
         app:srcCompat="@drawable/home"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 

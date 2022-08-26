@@ -16,7 +16,9 @@ class Datasource {
       Workout("Youtube Videos", R.drawable.workout7),
       Workout("Trainings Videos", R.drawable.workout8),
       Workout("Persönliche Daten",R.drawable.workout9),
-      Workout("Schrittzähler",R.drawable.workout10)
+      Workout("Schrittzähler",R.drawable.workout10),
+      Workout("Kalorienzähler", R.drawable.workout11),
+      Workout("Trainingsplaner", R.drawable.workout12)
       )
   }
 }
