@@ -33,5 +33,11 @@
     <action
         android:id="@+id/action_fragmentZwei_to_startFragment"
         app:destination="@id/startFragment" />
+    <argument
+        android:name="stringid"
+        app:argType="string" />
+    <argument
+        android:name="imageid"
+        app:argType="integer" />
   </fragment>
 </navigation>

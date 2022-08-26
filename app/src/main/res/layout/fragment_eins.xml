@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:spanCount="2"
         tools:ignore="SpeakableTextPresentCheck"
-        tools:itemCount="10"
+        tools:itemCount="8"
         tools:listitem="@layout/list_item" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>

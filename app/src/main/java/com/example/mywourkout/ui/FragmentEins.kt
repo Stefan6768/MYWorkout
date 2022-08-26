@@ -6,8 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
+import com.example.mywourkout.adapter.WorkAdapter
+import com.example.mywourkout.data.Datasource
 import com.example.mywourkout.databinding.FragmentEinsBinding
 
 class FragmentEins : Fragment() {
@@ -19,6 +20,7 @@ class FragmentEins : Fragment() {
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
+
     binding = DataBindingUtil.inflate(inflater, R.layout.fragment_eins, container, false)
 
     return binding.root
@@ -26,10 +28,13 @@ class FragmentEins : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-    binding.startFahrrad.setOnClickListener {
-      findNavController().navigate(FragmentEinsDirections.actionFragmentEinsToFragmentZwei())
+    val myworkout = Datasource().loadMyworkout()
 
-    }
+    binding.workoutRecycler.adapter = WorkAdapter(requireContext(), myworkout)
+
+    binding.workoutRecycler.setHasFixedSize(true)
   }
+
+
 
 }
