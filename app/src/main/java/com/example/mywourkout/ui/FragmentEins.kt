@@ -30,7 +30,7 @@ class FragmentEins : Fragment() {
 
     val myworkout = Datasource().loadMyworkout()
 
-    binding.workoutRecycler.adapter = WorkAdapter(requireContext(), myworkout)
+    binding.workoutRecycler.adapter = WorkAdapter(myworkout)
 
     binding.workoutRecycler.setHasFixedSize(true)
   }

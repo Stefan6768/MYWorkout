@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
 import com.example.mywourkout.databinding.FragmentZweiBinding
 
@@ -14,15 +15,15 @@ class FragmentZwei : Fragment() {
 
   private lateinit var binding: FragmentZweiBinding
 
-  private var stringId = 0
+  private var stringId = ""
   private var imageId = 0
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
     if (arguments != null) {
-      stringId = arguments!!.getInt("stringId")
-      imageId = arguments!!.getInt("imageId")
+      stringId = arguments!!.getString("stringid").toString()
+      imageId = arguments!!.getInt("imageid")
     }
   }
 
@@ -38,9 +39,13 @@ class FragmentZwei : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+    binding.returnButton2.setOnClickListener {
+      findNavController().navigateUp()
+    }
+
     binding.detailImage.setImageResource(imageId)
 
-    binding.detailText.text = getString(stringId)
+    binding.detailText.text = stringId
   }
 
 }
