@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/item_cardView"
-    android:layout_width="150dp"
-    android:layout_height="150dp"
-    android:layout_margin="16dp"
+    android:layout_width="145dp"
+    android:layout_height="145dp"
+    android:layout_margin="40dp"
     app:cardCornerRadius="10dp"
     app:cardElevation="5dp"
     app:cardPreventCornerOverlap="false">
@@ -20,14 +19,14 @@
             android:id="@+id/item_image"
             android:layout_width="179dp"
             android:layout_height="195dp"
+            android:layout_marginTop="80dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintHorizontal_bias="0.482"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/workout1"
-            android:contentDescription="TODO" />
+            app:layout_constraintVertical_bias="0.96"
+            app:srcCompat="@drawable/workout1" />
 
         <TextView
             android:id="@+id/item_text"
