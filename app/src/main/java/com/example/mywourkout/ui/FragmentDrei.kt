@@ -1,4 +1,10 @@
 package com.example.mywourkout.ui
 
-class FragmentDrei {
+import androidx.fragment.app.Fragment
+import com.example.mywourkout.databinding.FragmentDreiBinding
+
+class FragmentDrei : Fragment() {
+
+  private lateinit var binding: FragmentDreiBinding
+
 }

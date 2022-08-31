@@ -36,5 +36,17 @@
     <argument
         android:name="imageid"
         app:argType="integer" />
+    <action
+        android:id="@+id/action_fragmentZwei_to_fragmentDrei"
+        app:destination="@id/fragmentDrei" />
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentDrei"
+      android:name="com.example.mywourkout.ui.FragmentDrei"
+      tools:layout="@layout/fragment_drei"
+      android:label="FragmentDrei" >
+    <action
+        android:id="@+id/action_fragmentDrei_to_fragmentZwei"
+        app:destination="@id/fragmentZwei" />
   </fragment>
 </navigation>
