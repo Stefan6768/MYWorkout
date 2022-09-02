@@ -20,7 +20,7 @@ class WorkAdapter(
   class ItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
     val textView: TextView = view.findViewById(R.id.item_text)
     val imageView: ImageView = view.findViewById(R.id.item_image)
-    val cardView: MaterialCardView = view.findViewById(R.id.item_cardView)
+    val cardView: MaterialCardView = view.findViewById(R.id.video_cardView)
   }
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
