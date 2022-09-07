@@ -44,16 +44,16 @@ class FragmentZwei : Fragment() {
     }
 
     binding.min5Button.setOnClickListener {
-      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
+      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentBauch5min())
     }
 
-    binding.min10Button.setOnClickListener{
-      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
-    }
+  //  binding.min10Button.setOnClickListener{
+  //    findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
+   // }
 
-    binding.min15Button.setOnClickListener {
-     findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
-    }
+   // binding.min15Button.setOnClickListener {
+   //  findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
+   // }
 
     binding.detailImage.setImageResource(imageId)
 

@@ -24,6 +24,9 @@
     <action
         android:id="@+id/action_fragmentEins_to_startFragment"
         app:destination="@id/startFragment" />
+    <action
+        android:id="@+id/action_fragmentEins_to_fragmentDrei"
+        app:destination="@id/fragmentDrei" />
   </fragment>
   <fragment
       android:id="@+id/fragmentZwei"
@@ -37,8 +40,8 @@
         android:name="imageid"
         app:argType="integer" />
     <action
-        android:id="@+id/action_fragmentZwei_to_fragmentDrei"
-        app:destination="@id/fragmentDrei" />
+        android:id="@+id/action_fragmentZwei_to_fragmentBauch5min"
+        app:destination="@id/fragmentBauch5min" />
   </fragment>
   <fragment
       android:id="@+id/fragmentDrei"
@@ -46,7 +49,15 @@
       tools:layout="@layout/fragment_drei"
       android:label="FragmentDrei" >
     <action
-        android:id="@+id/action_fragmentDrei_to_fragmentZwei"
+        android:id="@+id/action_fragmentDrei_to_fragmentEins"
+        app:destination="@id/fragmentEins" />
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentBauch5min"
+      android:name="com.example.mywourkout.ui.FragmentBauch5min"
+      android:label="FragmentBauch5min" >
+    <action
+        android:id="@+id/action_fragmentBauch5min_to_fragmentZwei"
         app:destination="@id/fragmentZwei" />
   </fragment>
 </navigation>

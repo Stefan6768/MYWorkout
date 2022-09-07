@@ -1,5 +1,7 @@
 package com.example.mywourkout.ui
 
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -32,19 +34,21 @@ class FragmentDrei : Fragment() {
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
-    lifecycle.addObserver(binding.youtubePlayerView)
+   // super.onViewCreated(view, savedInstanceState)
+   // lifecycle.addObserver(binding.youtubePlayerView)
 
     binding.returnButton.setOnClickListener {
       findNavController().navigateUp()
     }
 
-    binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
-      override fun onReady(youTubePlayer: YouTubePlayer) {
-        val videoId = "https://www.youtube.com/watch?v=TsI0Vu3mJZc"
-        youTubePlayer.loadVideo(videoId, 0f)
-      }
-    })
+
+    // binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+    //   override fun onReady(youTubePlayer: YouTubePlayer) {
+    //     val videoId = "1f8yoFFdkcY"
+    //    youTubePlayer.loadVideo(videoId, 0f)
+    //   }
+    // })
+
   }
 
 }
