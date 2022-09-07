@@ -43,6 +43,18 @@ class FragmentZwei : Fragment() {
       findNavController().navigateUp()
     }
 
+    binding.min5Button.setOnClickListener {
+      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
+    }
+
+    binding.min10Button.setOnClickListener{
+      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
+    }
+
+    binding.min15Button.setOnClickListener {
+     findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
+    }
+
     binding.detailImage.setImageResource(imageId)
 
     binding.detailText.text = stringId
