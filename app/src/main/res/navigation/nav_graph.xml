@@ -42,6 +42,12 @@
     <action
         android:id="@+id/action_fragmentZwei_to_fragmentBauch5min"
         app:destination="@id/fragmentBauch5min" />
+    <action
+        android:id="@+id/action_fragmentZwei_to_fragmentBauch15min"
+        app:destination="@id/fragmentBauch15min" />
+    <action
+        android:id="@+id/action_fragmentZwei_to_fragmentBauch10min"
+        app:destination="@id/fragmentBauch10min" />
   </fragment>
   <fragment
       android:id="@+id/fragmentDrei"
@@ -55,9 +61,49 @@
   <fragment
       android:id="@+id/fragmentBauch5min"
       android:name="com.example.mywourkout.ui.FragmentBauch5min"
+      tools:layout="@layout/bauch_5min"
       android:label="FragmentBauch5min" >
     <action
         android:id="@+id/action_fragmentBauch5min_to_fragmentZwei"
         app:destination="@id/fragmentZwei" />
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentBauch10min"
+      android:name="com.example.mywourkout.ui.FragmentBauch10min"
+      tools:layout="@layout/bauch_10min"
+      android:label="FragmentBauch10min" >
+    <action
+        android:id="@+id/action_fragmentBauch10min_to_fragmentZwei"
+        app:destination="@id/fragmentZwei" />
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentBauch15min"
+      android:name="com.example.mywourkout.ui.FragmentBauch15min"
+      tools:layout="@layout/bauch_15min"
+      android:label="FragmentBauch15min" >
+    <action
+        android:id="@+id/action_fragmentBauch15min_to_fragmentZwei"
+        app:destination="@id/fragmentZwei" />
+  </fragment>
+  <fragment
+      android:id="@+id/loginFragment"
+      android:name="com.example.mywourkout.ui.authentication.LoginFragment"
+      tools:layout="@layout/fragment_login"
+      android:label="LoginFragment" >
+    <action
+        android:id="@+id/action_loginFragment_to_signUpFragment"
+        app:destination="@id/signUpFragment" />
+    <action
+        android:id="@+id/action_loginFragment_to_startFragment"
+        app:destination="@id/startFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/signUpFragment"
+      android:name="com.example.mywourkout.ui.authentication.SignUpFragment"
+      tools:layout="@layout/fragment_signup"
+      android:label="SignUpFragment" >
+    <action
+        android:id="@+id/action_signUpFragment_to_startFragment"
+        app:destination="@id/startFragment" />
   </fragment>
 </navigation>
