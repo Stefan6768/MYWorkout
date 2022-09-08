@@ -9,20 +9,21 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
-import com.example.mywourkout.databinding.Bauch5minBinding
+import com.example.mywourkout.databinding.Bauch10minBinding
+import com.example.mywourkout.databinding.Bauch15minBinding
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 
-class FragmentBauch5min : Fragment() {
+class FragmentBauch15min : Fragment() {
 
-  private lateinit var binding: Bauch5minBinding
+  private lateinit var binding: Bauch15minBinding
 
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-    binding = DataBindingUtil.inflate(inflater, R.layout.bauch_5min, container, false)
+    binding = DataBindingUtil.inflate(inflater, R.layout.bauch_15min, container, false)
 
     return binding.root
   }
@@ -35,22 +36,22 @@ class FragmentBauch5min : Fragment() {
 
     binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
       override fun onReady(youTubePlayer: YouTubePlayer) {
-        val videoId = "AOSaOtWtQfc"
+        val videoId = "https://www.youtube.com/watch?v=D7Bo3BqOCc4"
         youTubePlayer.loadVideo(videoId, 0f)
       }
     })
 
-   // binding.bauch5minVideo.setOnPreparedListener {mp ->
+   // binding.bauch15minVideo.setOnPreparedListener {mp ->
    //   mp.isLooping = true
-   //   mp.setVolume(0f,0f)
+    //  mp.setVolume(0f,0f)
    // }
 
-    //val uri = Uri.parse("android.resource://"+ context?.packageName + "/" + R.raw.bauch)
-   // binding.bauch5minVideo.setVideoURI(uri)
-   // binding.bauch5minVideo.start()
+   // val uri = Uri.parse("android.resource://"+ context?.packageName + "/" + R.raw.bauch2)
+   // binding.bauch15minVideo.setVideoURI(uri)
+   // binding.bauch15minVideo.start()
 
-   binding.imageButton.setOnClickListener {
-     findNavController().navigateUp()
-   }
+    binding.returnButton.setOnClickListener {
+      findNavController().navigateUp()
     }
   }
+}
