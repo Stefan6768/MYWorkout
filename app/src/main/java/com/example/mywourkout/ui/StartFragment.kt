@@ -38,14 +38,19 @@ class StartFragment : Fragment() {
       
     }
 
-    viewModel.currentUser.observe(
+  viewModel.currentUser.observe(
       viewLifecycleOwner,
       Observer {
         if (it == null) {
           findNavController().navigate(R.id.loginFragment)
         } else {
-          userMail = it.email.toString()
-          binding.itemText.text = "Hello $userMail! Nice to see you :)"
+          if (viewModel.guest == true ) {
+            binding.itemText.text = "Hello Gast! Nice to see you :)"
+          } else {
+            userMail = it.email.toString()
+            binding.itemText.text = "Hello $userMail! Nice to see you :)"
+          }
+
         }
       }
     )

@@ -9,7 +9,8 @@ buildscript {
     ext {
         // Hier werden die Versionsnummern der Bibliotheken angegeben
         nav_version = "2.5.0"
-        navigation_graph = "2.4.2"
+        navigation_graph = "2.5.2"
+        view_model = "2.4.1"
         retrofit_version = "2.9.0"
         moshi_version = "1.13.0"
         preferences = "1.2.0"
@@ -20,7 +21,7 @@ buildscript {
         gson_version = "2.9.0"
     }
     dependencies {
-        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$view_model")
         classpath 'com.google.gms:google-services:4.3.12' // Google Service plugin
     }
 }

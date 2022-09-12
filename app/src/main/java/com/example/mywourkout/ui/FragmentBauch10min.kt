@@ -36,8 +36,8 @@ class FragmentBauch10min : Fragment() {
 
     binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
       override fun onReady(youTubePlayer: YouTubePlayer) {
-        val videoId = "https://www.youtube.com/watch?v=X_ZJpZgRecI"
-        youTubePlayer.loadVideo(videoId, 0f)
+        val videoId = "X_ZJpZgRecI"
+        youTubePlayer.loadVideo(videoId, 5f)
       }
     })
 

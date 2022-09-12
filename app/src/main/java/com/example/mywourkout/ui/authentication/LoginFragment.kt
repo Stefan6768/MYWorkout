@@ -1,6 +1,7 @@
 package com.example.mywourkout.ui.authentication
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,8 +22,7 @@ class LoginFragment : Fragment() {
 
   override fun onCreateView(
     inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
+    container: ViewGroup?, savedInstanceState: Bundle?
   ): View? {
     binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, container, false)
 
@@ -36,10 +36,9 @@ class LoginFragment : Fragment() {
       findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToSignUpFragment())
     }
 
-    binding.loginButton.setOnClickListener{
+    binding.loginButton.setOnClickListener {
       val email = binding.loginEmailEdit.text.toString()
-      val password = binding.loginPsswordEdit.text.toString()
-
+      val password = binding.editTextTextPassword.text.toString()
       if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
         viewModel.login(email, password)
       }

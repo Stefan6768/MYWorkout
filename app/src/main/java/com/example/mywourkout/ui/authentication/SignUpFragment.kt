@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
 import com.example.mywourkout.databinding.FragmentSignupBinding
+import com.example.mywourkout.ui.FragmentZweiDirections
 import com.example.mywourkout.ui.MainViewModel
 
 class SignUpFragment : Fragment() {
@@ -24,7 +25,7 @@ class SignUpFragment : Fragment() {
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_signup,container, false)
+    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_signup, container, false)
 
     return binding.root
   }
@@ -33,8 +34,7 @@ class SignUpFragment : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.signupCancelButton.setOnClickListener {
-      findNavController()
-        .navigateUp()
+      viewModel.anonymLogin()
     }
 
     binding.signupSignupButton.setOnClickListener {
@@ -55,8 +55,9 @@ class SignUpFragment : Fragment() {
     val email = binding.signupEmail.text.toString()
     val password = binding.signupPassword.text.toString()
 
-    if (!email.isNullOrEmpty()  && !password.isNullOrEmpty()) {
+    if (!email.isNullOrEmpty() && !password.isNullOrEmpty()) {
       viewModel.signup(email, password)
     }
   }
 }
+
