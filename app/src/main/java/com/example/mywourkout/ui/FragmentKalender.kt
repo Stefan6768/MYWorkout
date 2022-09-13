@@ -8,21 +8,20 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
-import com.example.mywourkout.adapter.WorkAdapter
 import com.example.mywourkout.data.Datasource
-import com.example.mywourkout.databinding.FragmentEinsBinding
+import com.example.mywourkout.databinding.FragmentKalenderBinding
 
-class FragmentEins : Fragment() {
 
-  private lateinit var binding: FragmentEinsBinding
+class FragmentKalender : Fragment() {
+
+  private lateinit var binding: FragmentKalenderBinding
 
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-
-    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_eins, container, false)
+    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_kalender, container, false)
 
     return binding.root
   }
@@ -31,19 +30,9 @@ class FragmentEins : Fragment() {
 
     val myworkout = Datasource().loadMyworkout()
 
-    binding.workoutRecycler.adapter = WorkAdapter(myworkout)
-
-    binding.workoutRecycler.setHasFixedSize(true)
-
     binding.returnButton.setOnClickListener {
       findNavController().navigateUp()
     }
+
   }
-
-
-
-
-
-
-
 }

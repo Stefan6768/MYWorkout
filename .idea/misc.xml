@@ -14,6 +14,8 @@
         <entry key="app/src/main/res/layout/fragment_drei.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_eins.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_fuenf.xml" value="0.1774948120117187" />
+        <entry key="app/src/main/res/layout/fragment_kalender.xml" value="0.5880813598632812" />
+        <entry key="app/src/main/res/layout/fragment_kalorien.xml" value="0.345794677734375" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.15490264892578126" />
         <entry key="app/src/main/res/layout/fragment_persdaten.xml" value="0.5278411865234376" />
         <entry key="app/src/main/res/layout/fragment_schritte.xml" value="0.24074074074074073" />

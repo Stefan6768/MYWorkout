@@ -47,13 +47,13 @@ class FragmentZwei : Fragment() {
       findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentBauch5min())
     }
 
-  //  binding.min10Button.setOnClickListener{
-  //    findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
-   // }
+    binding.min10Button.setOnClickListener{
+      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentBauch10min())
+    }
 
-   // binding.min15Button.setOnClickListener {
-   //  findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentDrei())
-   // }
+    binding.min15Button.setOnClickListener {
+     findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentBauch15min())
+    }
 
     binding.detailImage.setImageResource(imageId)
 

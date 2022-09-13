@@ -12,52 +12,57 @@
       android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/hintergrund_image2"
+        android:id="@+id/hintergrund_image"
         android:layout_width="500dp"
         android:layout_height="900dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.576"
         app:srcCompat="@drawable/hintergrund" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/workout_recycler"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:spanCount="2"
-        tools:itemCount="12"
-        tools:listitem="@layout/list_item" />
-
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar10"
-        android:layout_width="411dp"
+        android:id="@+id/toolbar8"
+        android:layout_width="match_parent"
         android:layout_height="35dp"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/workout_recycler" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/return_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="@+id/toolbar10"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arrow_left"
         tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
 
+    <TextView
+        android:id="@+id/kalorien_zaehler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Kalorienzähler"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar8" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="382dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kalorien_zaehler_view"
+        app:srcCompat="@drawable/kalorien" />
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

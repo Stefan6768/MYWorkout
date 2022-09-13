@@ -34,7 +34,7 @@ class FragmentDrei : Fragment() {
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-   // super.onViewCreated(view, savedInstanceState)
+   super.onViewCreated(view, savedInstanceState)
    // lifecycle.addObserver(binding.youtubePlayerView)
 
     binding.returnButton.setOnClickListener {

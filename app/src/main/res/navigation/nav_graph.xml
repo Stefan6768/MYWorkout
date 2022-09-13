@@ -124,4 +124,14 @@
         android:id="@+id/action_fragmentSchritte_to_fragmentEins"
         app:destination="@id/fragmentEins" />
   </fragment>
+  <fragment
+      android:id="@+id/fragmentKalender"
+      android:name="com.example.mywourkout.ui.FragmentKalender"
+      tools:layout="@layout/fragment_kalender"
+      android:label="FragmentKalender" />
+  <fragment
+      android:id="@+id/fragmentKalorien"
+      android:name="com.example.mywourkout.ui.FragmentKalorien"
+      tools:layout="@layout/fragment_kalorien"
+      android:label="FragmentKalorien" />
 </navigation>
