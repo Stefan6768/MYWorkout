@@ -110,20 +110,12 @@
       android:id="@+id/fragmentPersDaten"
       android:name="com.example.mywourkout.ui.FragmentPersDaten"
       tools:layout="@layout/fragment_persdaten"
-      android:label="FragmentPersDaten" >
-    <action
-        android:id="@+id/action_fragmentPersDaten_to_fragmentEins"
-        app:destination="@id/fragmentEins" />
-  </fragment>
+      android:label="FragmentPersDaten" />
   <fragment
       android:id="@+id/fragmentSchritte"
       android:name="com.example.mywourkout.ui.FragmentSchritte"
       tools:layout="@layout/fragment_schritte"
-      android:label="FragmentSchritte" >
-    <action
-        android:id="@+id/action_fragmentSchritte_to_fragmentEins"
-        app:destination="@id/fragmentEins" />
-  </fragment>
+      android:label="FragmentSchritte" />
   <fragment
       android:id="@+id/fragmentKalender"
       android:name="com.example.mywourkout.ui.FragmentKalender"

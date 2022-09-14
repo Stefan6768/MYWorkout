@@ -2,8 +2,10 @@ package com.example.mywourkout
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.VideoView
-import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI.setupWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.mywourkout.databinding.ActivityMainBinding
 
 /**
@@ -14,6 +16,8 @@ class MainActivity : AppCompatActivity() {
   /*   Klassen Variablen   */
 
   private lateinit var binding: ActivityMainBinding
+
+  private lateinit var navController: NavController
 
   /*  Lifecycle  */
 
@@ -27,7 +31,14 @@ class MainActivity : AppCompatActivity() {
     super.onCreate(savedInstanceState)
 
     // Das Binding zur XML-Datei
-    binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+    binding = ActivityMainBinding.inflate(layoutInflater)
+    setContentView(binding.root)
+
+    navController = findNavController(R.id.fragmentContainerView)
+
+    binding.bottomNav.setupWithNavController(navController)
+
+
   }
 
 }

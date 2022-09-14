@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
+  <item
+      android:id="@+id/fragment_kalender"
+      android:icon="@android:drawable/ic_menu_my_calendar"
+      android:title="Kalender" />
+  <item
+      android:id="@+id/fragment_persdaten"
+      android:icon="@android:drawable/ic_menu_info_details"
+      android:title="Daten" />
+  <item
+      android:id="@+id/fragment_schritte"
+      android:icon="@android:drawable/sym_def_app_icon"
+      android:title="Schritte" />
 </menu>
