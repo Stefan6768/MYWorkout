@@ -12,6 +12,15 @@
     <action
         android:id="@+id/action_startFragment_to_fragmentEins"
         app:destination="@id/fragmentEins" />
+    <action
+        android:id="@+id/action_startFragment_to_fragmentKalender"
+        app:destination="@id/fragmentKalender" />
+    <action
+        android:id="@+id/action_startFragment_to_fragmentSchritte"
+        app:destination="@id/fragmentSchritte" />
+    <action
+        android:id="@+id/action_startFragment_to_fragmentPersDaten"
+        app:destination="@id/fragmentPersDaten" />
   </fragment>
   <fragment
       android:id="@+id/fragmentEins"
@@ -110,17 +119,29 @@
       android:id="@+id/fragmentPersDaten"
       android:name="com.example.mywourkout.ui.FragmentPersDaten"
       tools:layout="@layout/fragment_persdaten"
-      android:label="FragmentPersDaten" />
+      android:label="FragmentPersDaten" >
+    <action
+        android:id="@+id/action_fragmentPersDaten_to_startFragment"
+        app:destination="@id/startFragment" />
+  </fragment>
   <fragment
       android:id="@+id/fragmentSchritte"
       android:name="com.example.mywourkout.ui.FragmentSchritte"
       tools:layout="@layout/fragment_schritte"
-      android:label="FragmentSchritte" />
+      android:label="FragmentSchritte" >
+    <action
+        android:id="@+id/action_fragmentSchritte_to_startFragment2"
+        app:destination="@id/startFragment" />
+  </fragment>
   <fragment
       android:id="@+id/fragmentKalender"
       android:name="com.example.mywourkout.ui.FragmentKalender"
       tools:layout="@layout/fragment_kalender"
-      android:label="FragmentKalender" />
+      android:label="FragmentKalender" >
+    <action
+        android:id="@+id/action_fragmentKalender_to_startFragment"
+        app:destination="@id/startFragment" />
+  </fragment>
   <fragment
       android:id="@+id/fragmentKalorien"
       android:name="com.example.mywourkout.ui.FragmentKalorien"

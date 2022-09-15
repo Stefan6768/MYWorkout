@@ -5,8 +5,10 @@ import android.os.Bundle
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI.setupWithNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.mywourkout.databinding.ActivityMainBinding
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 /**
  * Main Activity dient als Einstiegspunkt für die App
@@ -38,7 +40,5 @@ class MainActivity : AppCompatActivity() {
 
     binding.bottomNav.setupWithNavController(navController)
 
-
   }
-
 }

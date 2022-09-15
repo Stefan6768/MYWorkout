@@ -5,7 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.365" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.365" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/bauch_10min.xml" value="0.15364583333333334" />
         <entry key="app/src/main/res/layout/bauch_15min.xml" value="0.15364583333333334" />
         <entry key="app/src/main/res/layout/bauch_5min.xml" value="0.29238586425781254" />
@@ -14,7 +14,7 @@
         <entry key="app/src/main/res/layout/fragment_drei.xml" value="0.2989990234375" />
         <entry key="app/src/main/res/layout/fragment_eins.xml" value="0.25951261222744765" />
         <entry key="app/src/main/res/layout/fragment_fuenf.xml" value="0.1774948120117187" />
-        <entry key="app/src/main/res/layout/fragment_kalender.xml" value="0.34703674316406247" />
+        <entry key="app/src/main/res/layout/fragment_kalender.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_kalorien.xml" value="0.345794677734375" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.15490264892578126" />
         <entry key="app/src/main/res/layout/fragment_persdaten.xml" value="0.5278411865234376" />
@@ -22,6 +22,7 @@
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.2421829223632813" />
         <entry key="app/src/main/res/layout/fragment_start.xml" value="0.19280242919921875" />
         <entry key="app/src/main/res/layout/fragment_start1.xml" value="0.4385635375976561" />
+        <entry key="app/src/main/res/layout/fragment_video.xml" value="0.12612227447627192" />
         <entry key="app/src/main/res/layout/fragment_vier.xml" value="0.29443359375000006" />
         <entry key="app/src/main/res/layout/fragment_zwei.xml" value="0.34574468085106386" />
         <entry key="app/src/main/res/layout/list_item.xml" value="0.24306328814962633" />

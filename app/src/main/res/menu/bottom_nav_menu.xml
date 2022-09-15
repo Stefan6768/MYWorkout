@@ -3,15 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
   <item
-      android:id="@+id/fragment_kalender"
-      android:icon="@android:drawable/ic_menu_my_calendar"
+      android:id="@+id/fragmentKalender"
+      android:icon="@drawable/ic_baseline_calendar_today_24"
       android:title="Kalender" />
   <item
-      android:id="@+id/fragment_persdaten"
+      android:id="@+id/fragmentPersDaten"
       android:icon="@android:drawable/ic_menu_info_details"
       android:title="Daten" />
   <item
-      android:id="@+id/fragment_schritte"
-      android:icon="@android:drawable/sym_def_app_icon"
+      android:id="@+id/fragmentSchritte"
+      android:icon="@android:drawable/sym_contact_card"
       android:title="Schritte" />
 </menu>

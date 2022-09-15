@@ -6,4 +6,7 @@
   <string name="kalorien_z_hler">Kalorien Zähler</string>
   <string name="pers_daten">Pers. Daten</string>
   <string name="schritte">Schritte</string>
+  <string name="bauch5min">Bauch Training 5 min</string>
+  <string name="bauch10min">Bauch Training 10 min</string>
+
 </resources>
