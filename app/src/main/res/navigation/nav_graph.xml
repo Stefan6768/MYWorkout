@@ -93,6 +93,9 @@
     <action
         android:id="@+id/action_fragmentPersDaten_to_startFragment"
         app:destination="@id/startFragment" />
+    <action
+        android:id="@+id/action_fragmentPersDaten_to_fragmentEditPersdaten"
+        app:destination="@id/fragmentEditPersdaten" />
   </fragment>
   <fragment
       android:id="@+id/fragmentSchritte"
@@ -126,5 +129,14 @@
     <argument
         android:name="length"
         app:argType="string" />
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentEditPersdaten"
+      android:name="com.example.mywourkout.ui.FragmentEditPersdaten"
+      tools:layout="@layout/fragment_edit_persdaten"
+      android:label="FragmentEditPersdaten" >
+    <action
+        android:id="@+id/action_fragmentEditPersdaten_to_fragmentPersDaten"
+        app:destination="@id/fragmentPersDaten" />
   </fragment>
 </navigation>

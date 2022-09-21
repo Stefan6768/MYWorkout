@@ -45,19 +45,19 @@ class FragmentZwei : Fragment() {
 
     binding.min5Button.setOnClickListener {
       findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentSportVideo(
-        stringId, "5min"
+        stringId, "5 min"
       ))
     }
 
     binding.min10Button.setOnClickListener{
       findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentSportVideo(
-        stringId, "10min"
+        stringId, "10 min"
       ))
     }
 
     binding.min15Button.setOnClickListener {
      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentSportVideo(
-       stringId, "15min"
+       stringId, "15 min"
      ))
     }
 

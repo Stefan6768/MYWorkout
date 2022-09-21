@@ -1,6 +1,7 @@
 package com.example.mywourkout.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -52,14 +53,15 @@ class FragmentSportVideo : Fragment() {
     binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
       override fun onReady(youTubePlayer: YouTubePlayer) {
 
-        val searchid = video + length
+        val searchid = video + " " +  length
 
         println("searchid=$searchid")
 
         //val videoId = resources.getString(searchid.toInt())
         val video: Video? = viewModel.videos.find { it.id == searchid  }
         if (video != null) {
-          youTubePlayer.loadVideo("bfohE7qM9pM", 15f)
+          Log.d(TAG,"video found $video.video")
+          youTubePlayer.loadVideo(video.video, 4f)
         }
 
       }

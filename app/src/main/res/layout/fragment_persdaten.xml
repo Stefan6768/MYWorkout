@@ -13,97 +13,38 @@
 
     <ImageView
         android:id="@+id/hintergrund_image"
-        android:layout_width="500dp"
-        android:layout_height="900dp"
+        android:layout_width="509dp"
+        android:layout_height="980dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.505"
         app:srcCompat="@drawable/hintergrund" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/alter_EditText5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:hint="Alter"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gewicht_EditText4"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/gewicht_EditText4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:hint="Gewicht"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/groesse_EditText3"
-        tools:ignore="TouchTargetSizeCheck" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/groesse_EditText3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:hint="Grösse"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/geschlecht_EditText"
-        tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
         android:id="@+id/persdaten_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="80dp"
         android:text="Persönliche Daten"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toTopOf="@+id/persdaten_image"
+        app:layout_constraintEnd_toEndOf="@+id/persdaten_image"
         app:layout_constraintStart_toStartOf="@+id/persdaten_image"
-        app:layout_constraintTop_toBottomOf="@+id/persdaten_image" />
+        app:layout_constraintTop_toBottomOf="@+id/return_button" />
 
     <ImageView
         android:id="@+id/persdaten_image"
         android:layout_width="382dp"
         android:layout_height="208dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="136dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/persdaten" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/geschlecht_EditText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:hint="Geschlecht"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/persdaten_text"
-        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageButton
         android:id="@+id/return_button"
@@ -117,11 +58,64 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/edit_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#B3C7F0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_edit_24"
-        tools:layout_editor_absoluteX="343dp" />
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/geschlecht_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:text="Geschlecht"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/persdaten_image"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/persdaten_image"
+        app:layout_constraintTop_toBottomOf="@+id/persdaten_image" />
+
+    <TextView
+        android:id="@+id/groesse_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Größe"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/geschlecht_text"
+        app:layout_constraintStart_toStartOf="@+id/geschlecht_text"
+        app:layout_constraintTop_toBottomOf="@+id/geschlecht_text" />
+
+    <TextView
+        android:id="@+id/gewicht_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Gewicht"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/groesse_text"
+        app:layout_constraintStart_toStartOf="@+id/groesse_text"
+        app:layout_constraintTop_toBottomOf="@+id/groesse_text" />
+
+    <TextView
+        android:id="@+id/alter_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Alter"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/gewicht_text"
+        app:layout_constraintStart_toStartOf="@+id/gewicht_text"
+        app:layout_constraintTop_toBottomOf="@+id/gewicht_text" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
