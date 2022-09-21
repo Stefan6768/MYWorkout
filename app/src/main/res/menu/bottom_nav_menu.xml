@@ -8,10 +8,10 @@
       android:title="Kalender" />
   <item
       android:id="@+id/fragmentPersDaten"
-      android:icon="@android:drawable/ic_menu_info_details"
+      android:icon="@drawable/ic_baseline_person_24"
       android:title="Daten" />
   <item
       android:id="@+id/fragmentSchritte"
-      android:icon="@android:drawable/sym_contact_card"
+      android:icon="@drawable/ic_baseline_directions_walk_24"
       android:title="Schritte" />
 </menu>

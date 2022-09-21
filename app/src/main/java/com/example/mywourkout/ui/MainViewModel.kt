@@ -5,7 +5,8 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.myworkout.data.model.Workout
+import com.example.mywourkout.data.datamodels.Video
+import com.example.mywourkout.data.datamodels.VideoList
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
@@ -25,6 +26,13 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
  // private val  _loading = MutableLiveData<ApiStatus>()
 //  val loading: LiveData<ApiStatus>
 //  get() = _loading
+
+  private val videolist = VideoList()
+
+  private var _videos: List<Video> = videolist.videos
+  val videos: List<Video>
+    get() = _videos
+
 
 
   // Kommunikationspunkt mit der FirebaseAuth
@@ -76,5 +84,4 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
     firebaseAuth.signOut()
     _currentUser.value = firebaseAuth.currentUser
   }
-
 }

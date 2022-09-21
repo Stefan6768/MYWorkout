@@ -11,7 +11,6 @@ import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
 import com.example.mywourkout.databinding.FragmentSignupBinding
-import com.example.mywourkout.ui.FragmentZweiDirections
 import com.example.mywourkout.ui.MainViewModel
 
 class SignUpFragment : Fragment() {

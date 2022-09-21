@@ -39,20 +39,26 @@ class FragmentZwei : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-    binding.returnButton2.setOnClickListener {
+    binding.returnButton.setOnClickListener {
       findNavController().navigateUp()
     }
 
     binding.min5Button.setOnClickListener {
-      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentBauch5min())
+      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentSportVideo(
+        stringId, "5min"
+      ))
     }
 
     binding.min10Button.setOnClickListener{
-      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentBauch10min())
+      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentSportVideo(
+        stringId, "10min"
+      ))
     }
 
     binding.min15Button.setOnClickListener {
-     findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentBauch15min())
+     findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentSportVideo(
+       stringId, "15min"
+     ))
     }
 
     binding.detailImage.setImageResource(imageId)

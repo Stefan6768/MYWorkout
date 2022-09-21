@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ImageView
+      android:id="@+id/hintergrund_image"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/hintergrund" />
+
+  <ImageView
+      android:id="@+id/pers_image"
+      android:layout_width="379dp"
+      android:layout_height="281dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:srcCompat="@drawable/persdaten"
+      tools:layout_editor_absoluteY="172dp" />
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="28dp"
+      android:text="Persönliche Daten"
+      android:textColor="#000000"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      app:layout_constraintBottom_toTopOf="@+id/pers_image"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.496"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/textInputEditText2"
+      android:layout_width="380dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="28dp"
+      android:hint="Geschlecht"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@+id/pers_image"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/pers_image"
+      app:layout_constraintTop_toBottomOf="@+id/pers_image"
+      tools:ignore="TouchTargetSizeCheck" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout2"
+      android:layout_width="382dp"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="334dp"
+      app:layout_constraintBottom_toBottomOf="@+id/hintergrund_image"
+      app:layout_constraintEnd_toEndOf="@+id/textInputEditText2"
+      app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
+      app:layout_constraintTop_toBottomOf="@+id/textInputEditText2">
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/textInputEditText3"
+      android:layout_width="380dp"
+      android:layout_height="wrap_content"
+      android:hint="Grösse"
+      android:textColor="#000000"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@+id/textInputEditText2"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/textInputEditText2"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+      tools:ignore="TouchTargetSizeCheck" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout"
+      android:layout_width="380dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="@+id/textInputEditText3"
+      app:layout_constraintStart_toStartOf="@+id/textInputEditText3"
+      app:layout_constraintTop_toBottomOf="@+id/textInputEditText3">
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/textInputEditText"
+      android:layout_width="380dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:hint="Gewicht"
+      app:layout_constraintEnd_toEndOf="@+id/textInputEditText3"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/textInputEditText3"
+      app:layout_constraintTop_toBottomOf="@+id/textInputEditText3"
+      tools:ignore="TouchTargetSizeCheck" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayout3"
+      android:layout_width="336dp"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="@+id/textInputEditText"
+      app:layout_constraintStart_toStartOf="@+id/textInputEditText"
+      app:layout_constraintTop_toBottomOf="@+id/textInputEditText">
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputEditText
+      android:layout_width="380dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:hint="Alter"
+      app:layout_constraintEnd_toEndOf="@+id/textInputEditText"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="@+id/textInputEditText"
+      app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+  <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar4"
+      android:layout_width="411dp"
+      android:layout_height="55dp"
+      android:layout_marginBottom="28dp"
+      android:minHeight="?attr/actionBarSize"
+      android:theme="?attr/actionBarTheme"
+      app:layout_constraintBottom_toTopOf="@+id/textView"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <ImageButton
+      android:id="@+id/imageButton3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="48dp"
+      android:layout_marginTop="4dp"
+      android:backgroundTint="#B3C7F0"
+      app:layout_constraintStart_toStartOf="@+id/toolbar4"
+      app:layout_constraintTop_toTopOf="@+id/toolbar4"
+      app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+  <ImageButton
+      android:id="@+id/imageButton4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:layout_marginEnd="48dp"
+      android:backgroundTint="#B3C7F0"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/hintergrund_image"
+      app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,9 @@
     <action
         android:id="@+id/action_startFragment_to_fragmentPersDaten"
         app:destination="@id/fragmentPersDaten" />
+    <action
+        android:id="@+id/action_startFragment_to_loginFragment"
+        app:destination="@id/loginFragment" />
   </fragment>
   <fragment
       android:id="@+id/fragmentEins"
@@ -49,14 +52,8 @@
         android:name="imageid"
         app:argType="integer" />
     <action
-        android:id="@+id/action_fragmentZwei_to_fragmentBauch5min"
-        app:destination="@id/fragmentBauch5min" />
-    <action
-        android:id="@+id/action_fragmentZwei_to_fragmentBauch15min"
-        app:destination="@id/fragmentBauch15min" />
-    <action
-        android:id="@+id/action_fragmentZwei_to_fragmentBauch10min"
-        app:destination="@id/fragmentBauch10min" />
+        android:id="@+id/action_fragmentZwei_to_fragmentSportVideo"
+        app:destination="@id/fragmentSportVideo" />
   </fragment>
   <fragment
       android:id="@+id/fragmentDrei"
@@ -66,33 +63,6 @@
     <action
         android:id="@+id/action_fragmentDrei_to_fragmentEins"
         app:destination="@id/fragmentEins" />
-  </fragment>
-  <fragment
-      android:id="@+id/fragmentBauch5min"
-      android:name="com.example.mywourkout.ui.FragmentBauch5min"
-      tools:layout="@layout/bauch_5min"
-      android:label="FragmentBauch5min" >
-    <action
-        android:id="@+id/action_fragmentBauch5min_to_fragmentZwei"
-        app:destination="@id/fragmentZwei" />
-  </fragment>
-  <fragment
-      android:id="@+id/fragmentBauch10min"
-      android:name="com.example.mywourkout.ui.FragmentBauch10min"
-      tools:layout="@layout/bauch_10min"
-      android:label="FragmentBauch10min" >
-    <action
-        android:id="@+id/action_fragmentBauch10min_to_fragmentZwei"
-        app:destination="@id/fragmentZwei" />
-  </fragment>
-  <fragment
-      android:id="@+id/fragmentBauch15min"
-      android:name="com.example.mywourkout.ui.FragmentBauch15min"
-      tools:layout="@layout/bauch_15min"
-      android:label="FragmentBauch15min" >
-    <action
-        android:id="@+id/action_fragmentBauch15min_to_fragmentZwei"
-        app:destination="@id/fragmentZwei" />
   </fragment>
   <fragment
       android:id="@+id/loginFragment"
@@ -143,8 +113,18 @@
         app:destination="@id/startFragment" />
   </fragment>
   <fragment
-      android:id="@+id/fragmentKalorien"
-      android:name="com.example.mywourkout.ui.FragmentKalorien"
-      tools:layout="@layout/fragment_kalorien"
-      android:label="FragmentKalorien" />
+      android:id="@+id/fragmentSportVideo"
+      android:name="com.example.mywourkout.ui.FragmentSportVideo"
+      tools:layout="@layout/fragment_sportvideo"
+      android:label="FragmentSportVideo" >
+    <action
+        android:id="@+id/action_fragmentSportVideo_to_fragmentZwei"
+        app:destination="@id/fragmentZwei" />
+    <argument
+        android:name="video"
+        app:argType="string" />
+    <argument
+        android:name="length"
+        app:argType="string" />
+  </fragment>
 </navigation>
