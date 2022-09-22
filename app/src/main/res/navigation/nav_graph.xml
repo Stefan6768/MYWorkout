@@ -11,7 +11,7 @@
       android:label="StartFragment" >
     <action
         android:id="@+id/action_startFragment_to_fragmentEins"
-        app:destination="@id/fragmentEins" />
+        app:destination="@id/fragmentRecycler" />
     <action
         android:id="@+id/action_startFragment_to_fragmentKalender"
         app:destination="@id/fragmentKalender" />
@@ -26,25 +26,25 @@
         app:destination="@id/loginFragment" />
   </fragment>
   <fragment
-      android:id="@+id/fragmentEins"
-      android:name="com.example.mywourkout.ui.FragmentEins"
-      tools:layout="@layout/fragment_eins"
-      android:label="FragmentEins" >
+      android:id="@+id/fragmentRecycler"
+      android:name="com.example.mywourkout.ui.FragmentRecycler"
+      android:label="FragmentRecycler"
+      tools:layout="@layout/fragment_recycler">
     <action
         android:id="@+id/action_fragmentEins_to_fragmentZwei"
-        app:destination="@id/fragmentZwei" />
+        app:destination="@id/fragmentTrainingseinheit" />
     <action
         android:id="@+id/action_fragmentEins_to_startFragment"
         app:destination="@id/startFragment" />
     <action
         android:id="@+id/action_fragmentEins_to_fragmentDrei"
-        app:destination="@id/fragmentDrei" />
+        app:destination="@id/fragmentPlayer" />
   </fragment>
   <fragment
-      android:id="@+id/fragmentZwei"
-      android:name="com.example.mywourkout.ui.FragmentZwei"
-      tools:layout="@layout/fragment_zwei"
-      android:label="FragmentZwei" >
+      android:id="@+id/fragmentTrainingseinheit"
+      android:name="com.example.mywourkout.ui.FragmentTrainingseinheit"
+      android:label="FragmentTrainingseinheit"
+      tools:layout="@layout/fragment_trainingseinheit">
     <argument
         android:name="stringid"
         app:argType="string" />
@@ -56,13 +56,13 @@
         app:destination="@id/fragmentSportVideo" />
   </fragment>
   <fragment
-      android:id="@+id/fragmentDrei"
-      android:name="com.example.mywourkout.ui.FragmentDrei"
-      tools:layout="@layout/fragment_drei"
-      android:label="FragmentDrei" >
+      android:id="@+id/fragmentPlayer"
+      android:name="com.example.mywourkout.ui.FragmentPlayer"
+      android:label="FragmentPlayer"
+      tools:layout="@layout/fragment_player">
     <action
         android:id="@+id/action_fragmentDrei_to_fragmentEins"
-        app:destination="@id/fragmentEins" />
+        app:destination="@id/fragmentRecycler" />
   </fragment>
   <fragment
       android:id="@+id/loginFragment"
@@ -122,7 +122,7 @@
       android:label="FragmentSportVideo" >
     <action
         android:id="@+id/action_fragmentSportVideo_to_fragmentZwei"
-        app:destination="@id/fragmentZwei" />
+        app:destination="@id/fragmentTrainingseinheit" />
     <argument
         android:name="video"
         app:argType="string" />

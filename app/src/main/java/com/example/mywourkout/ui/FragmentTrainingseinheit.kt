@@ -8,12 +8,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
-import com.example.mywourkout.databinding.FragmentZweiBinding
+import com.example.mywourkout.databinding.FragmentTrainingseinheitBinding
 
 
-class FragmentZwei : Fragment() {
+class FragmentTrainingseinheit : Fragment() {
 
-  private lateinit var binding: FragmentZweiBinding
+ private lateinit var binding: FragmentTrainingseinheitBinding
 
   private var stringId = ""
   private var imageId = 0
@@ -32,7 +32,7 @@ class FragmentZwei : Fragment() {
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_zwei, container, false)
+    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_trainingseinheit, container, false)
 
     return binding.root
   }
@@ -44,19 +44,19 @@ class FragmentZwei : Fragment() {
     }
 
     binding.min5Button.setOnClickListener {
-      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentSportVideo(
+      findNavController().navigate(FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
         stringId, "5 min"
       ))
     }
 
     binding.min10Button.setOnClickListener{
-      findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentSportVideo(
+      findNavController().navigate(FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
         stringId, "10 min"
       ))
     }
 
     binding.min15Button.setOnClickListener {
-     findNavController().navigate(FragmentZweiDirections.actionFragmentZweiToFragmentSportVideo(
+     findNavController().navigate(FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
        stringId, "15 min"
      ))
     }

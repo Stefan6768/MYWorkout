@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ImageView
+      android:id="@+id/hintergrund_image"
+      android:layout_width="450dp"
+      android:layout_height="960dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/hintergrund" />
+
+  <View
+      android:id="@+id/view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/user_geschlecht_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="128dp"
+      android:text="TextView"
+      android:textColor="#000000"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/view"
+      tools:text="Geschlecht" />
+
+  <TextView
+      android:id="@+id/user_groesse_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="80dp"
+      android:text="TextView"
+      android:textColor="#000000"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@+id/user_geschlecht_text"
+      app:layout_constraintStart_toStartOf="@+id/user_geschlecht_text"
+      app:layout_constraintTop_toBottomOf="@+id/user_geschlecht_text"
+      tools:text="Größe" />
+
+  <TextView
+      android:id="@+id/user_gewicht_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="80dp"
+      android:text="TextView"
+      android:textColor="#000000"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@+id/user_groesse_text"
+      app:layout_constraintStart_toStartOf="@+id/user_groesse_text"
+      app:layout_constraintTop_toBottomOf="@+id/user_groesse_text"
+      tools:text="Gewicht" />
+
+  <TextView
+      android:id="@+id/user_alter_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="80dp"
+      android:text="TextView"
+      android:textColor="#000000"
+      android:textSize="30sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="@+id/user_gewicht_text"
+      app:layout_constraintStart_toStartOf="@+id/user_gewicht_text"
+      app:layout_constraintTop_toBottomOf="@+id/user_gewicht_text"
+      tools:text="Alter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

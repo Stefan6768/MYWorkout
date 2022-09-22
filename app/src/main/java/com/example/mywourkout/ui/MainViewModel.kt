@@ -1,14 +1,20 @@
 package com.example.mywourkout.ui
 
 import android.app.Application
+import android.security.identity.AccessControlProfileId
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
+import com.example.mywourkout.data.datamodels.User
 import com.example.mywourkout.data.datamodels.Video
 import com.example.mywourkout.data.datamodels.VideoList
+import com.example.mywourkout.local.RepositoryUser
+import com.example.mywourkout.local.getDatabase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.coroutines.launch
 
 //import com.example.mywourkout.local.getDatabase
 //import com.example.mywourkout.remote.AppRepository
@@ -26,6 +32,42 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
  // private val  _loading = MutableLiveData<ApiStatus>()
 //  val loading: LiveData<ApiStatus>
 //  get() = _loading
+
+  private val database = getDatabase(application)
+  private val repositoryUser = RepositoryUser(database)
+
+  val userList = repositoryUser.userList
+
+  private val _complete = MutableLiveData<Boolean>()
+  val complete: LiveData<Boolean>
+  get() = _complete
+
+  fun insertUser(user: User) {
+    viewModelScope.launch {
+      repositoryUser.insert(user)
+      _complete.value = true
+    }
+  }
+
+  fun updateUser(user: User) {
+    viewModelScope.launch {
+      repositoryUser.update(user)
+      _complete.value = true
+    }
+  }
+
+  fun deleteUser(id: Long) {
+    viewModelScope.launch {
+      repositoryUser.delete(id)
+      _complete.value = true
+    }
+  }
+
+  fun unsetComplete() {
+    _complete.value = false
+  }
+
+
 
   private val videolist = VideoList()
 

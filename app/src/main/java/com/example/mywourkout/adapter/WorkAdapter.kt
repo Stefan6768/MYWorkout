@@ -9,7 +9,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myworkout.data.model.Workout
 import com.example.mywourkout.R
-import com.example.mywourkout.ui.FragmentEinsDirections
+import com.example.mywourkout.ui.FragmentRecyclerDirections
 import com.google.android.material.card.MaterialCardView
 
 
@@ -39,7 +39,7 @@ class WorkAdapter(
     holder.cardView.setOnClickListener {
       holder.view.findNavController()
         .navigate(
-          FragmentEinsDirections.actionFragmentEinsToFragmentZwei(
+          FragmentRecyclerDirections.actionFragmentEinsToFragmentZwei(
             item.string,
             item.imageResource
           )

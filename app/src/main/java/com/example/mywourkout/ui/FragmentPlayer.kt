@@ -1,7 +1,5 @@
 package com.example.mywourkout.ui
 
-import android.media.MediaPlayer
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,14 +8,12 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
-import com.example.mywourkout.databinding.FragmentDreiBinding
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
+import com.example.mywourkout.databinding.FragmentPlayerBinding
 
 
-class FragmentDrei : Fragment() {
+class FragmentPlayer : Fragment() {
 
-  private lateinit var binding: FragmentDreiBinding
+  private lateinit var binding: FragmentPlayerBinding
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -29,7 +25,7 @@ class FragmentDrei : Fragment() {
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_drei, container, false)
+    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_player, container, false)
     return binding.root
   }
 

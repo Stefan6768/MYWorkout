@@ -6,16 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
 import com.example.mywourkout.adapter.WorkAdapter
 import com.example.mywourkout.data.Datasource
-import com.example.mywourkout.databinding.FragmentEinsBinding
+import com.example.mywourkout.databinding.FragmentRecyclerBinding
 
-class FragmentEins : Fragment() {
+class FragmentRecycler : Fragment() {
 
-  private lateinit var binding: FragmentEinsBinding
+  private lateinit var binding: FragmentRecyclerBinding
 
   //private val viewModel: MainViewModel by activityViewModels()
 
@@ -25,7 +24,7 @@ class FragmentEins : Fragment() {
     savedInstanceState: Bundle?
   ): View? {
 
-    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_eins, container, false)
+    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_recycler, container, false)
 
     return binding.root
   }
