@@ -49,11 +49,11 @@ class StartFragment : Fragment() {
         if (it == null) {
           findNavController().navigate(R.id.loginFragment)
         } else {
-          if (viewModel.guest == true ) {
-            binding.itemText.text = "Hello Gast! Nice to see you :)"
+          if (viewModel.guest == false ) {
+            binding.itemText.text = "Hallo Gast ! Viel Spass !"
           } else {
             userMail = it.email.toString()
-            binding.itemText.text = "Hello $userMail! Nice to see you :)"
+            binding.itemText.text = "Hallo $userMail! Viel Spass !"
           }
 
         }

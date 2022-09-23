@@ -138,5 +138,44 @@
     <action
         android:id="@+id/action_fragmentEditPersdaten_to_fragmentPersDaten"
         app:destination="@id/fragmentPersDaten" />
+    <action
+        android:id="@+id/action_fragmentEditPersdaten_to_fragmentSaveUser"
+        app:destination="@id/fragmentSaveUser" />
+    <action
+        android:id="@+id/action_fragmentEditPersdaten_to_fragmentUserMain"
+        app:destination="@id/fragmentUserMain" />
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentSaveUser"
+      android:name="com.example.mywourkout.ui.FragmentSaveUser"
+      tools:layout="@layout/fragment_save_user"
+      android:label="FragmentSaveUser" >
+    <action
+        android:id="@+id/action_fragmentSaveUser_to_fragmentEditPersdaten"
+        app:destination="@id/fragmentEditPersdaten" />
+    <argument
+        android:name="geschlechtid"
+        app:argType="string" />
+    <argument
+        android:name="groesseid"
+        app:argType="string" />
+    <argument
+        android:name="gewichtid"
+        app:argType="string" />
+    <argument
+        android:name="alterid"
+        app:argType="string" />
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentUserMain"
+      android:name="com.example.mywourkout.ui.FragmentUserMain"
+      tools:layout="@layout/fragment_user_main"
+      android:label="FragmentUserMain" >
+    <action
+        android:id="@+id/action_fragmentUserMain_to_fragmentSaveUser"
+        app:destination="@id/fragmentSaveUser" />
+    <action
+        android:id="@+id/action_fragmentUserMain_to_fragmentEditPersdaten"
+        app:destination="@id/fragmentEditPersdaten" />
   </fragment>
 </navigation>

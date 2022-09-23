@@ -15,10 +15,13 @@
         android:id="@+id/imageView2"
         android:layout_width="480dp"
         android:layout_height="975dp"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321"
         app:srcCompat="@drawable/hintergrund" />
 
     <androidx.appcompat.widget.Toolbar
@@ -35,7 +38,7 @@
         android:id="@+id/return_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="16dp"
         android:backgroundTint="#B3C7F0"
         app:layout_constraintStart_toStartOf="@+id/toolbar4"
         app:layout_constraintTop_toTopOf="parent"
@@ -46,78 +49,132 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="4dp"
         android:text="Persönliche Daten"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/toolbar4"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/toolbar4"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="240dp"
         android:layout_marginTop="22dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/persdaten" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/geschlecht_edit_text"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:hint="Geschlecht"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <Spinner
+        android:id="@+id/geschlecht_spinner"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/fitness_background"
+        android:backgroundTint="#B3C7F0"
+        android:clickable="false"
+        android:entries="@array/geschlecht_array"
+        android:spinnerMode="dropdown"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         tools:ignore="TouchTargetSizeCheck" />
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/groesse_edit_text"
-        android:layout_width="411dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_groesse_textfield"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Größe"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/geschlecht_edit_text"
-        tools:ignore="TouchTargetSizeCheck" />
+        android:textColorHint="#000000"
+        app:boxStrokeColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/geschlecht_spinner"
+        app:layout_constraintStart_toStartOf="@+id/geschlecht_spinner"
+        app:layout_constraintTop_toBottomOf="@+id/geschlecht_spinner">
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textInputEditText"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Gewicht"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/groesse_edit_text"
-        tools:ignore="TouchTargetSizeCheck" />
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/edit_groesse_edit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:backgroundTint="#B3C7F0"
+          android:backgroundTintMode="src_in"
+          android:hint="Größe"
+          android:textColor="#000000"
+          android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/alter_edit_text"
-        android:layout_width="411dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_gewicht_textfield"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:hint="Alter"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/edit_groesse_textfield"
+        app:layout_constraintStart_toStartOf="@+id/edit_groesse_textfield"
+        app:layout_constraintTop_toBottomOf="@+id/edit_groesse_textfield">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/edit_gewicht_edit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:backgroundTint="#B3C7F0"
+          android:hint="Gewicht"
+          android:textColor="#000000"
+          android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edit_alter_textfield"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/edit_gewicht_textfield"
+        app:layout_constraintStart_toStartOf="@+id/edit_gewicht_textfield"
+        app:layout_constraintTop_toBottomOf="@+id/edit_gewicht_textfield">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/edit_alter_edit"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:backgroundTint="#B3C7F0"
+          android:hint="Alter"
+          android:textColor="#000000"
+          android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#B3C7F0"
+        android:text="Löschen"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
+        app:layout_constraintStart_toStartOf="@+id/edit_alter_textfield"
+        app:layout_constraintTop_toBottomOf="@+id/edit_alter_textfield" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#B3C7F0"
+        android:text="Speichern"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/edit_alter_textfield"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/delete_button"
+        app:layout_constraintTop_toBottomOf="@+id/edit_alter_textfield" />
+
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

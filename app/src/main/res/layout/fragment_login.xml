@@ -13,8 +13,8 @@
 
     <ImageView
         android:id="@+id/hintergrund_image"
-        android:layout_width="500dp"
-        android:layout_height="900dp"
+        android:layout_width="550dp"
+        android:layout_height="950dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
@@ -73,7 +73,7 @@
         android:backgroundTint="#B3C7F0"
         android:text="LOGIN"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
         app:layout_constraintHorizontal_bias="0.0"
@@ -89,7 +89,7 @@
         android:backgroundTint="#B3C7F0"
         android:text="SIGN UP"
         android:textColor="#000000"
-        android:textSize="24sp"
+        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/login_button"
         app:layout_constraintStart_toStartOf="@+id/login_button"

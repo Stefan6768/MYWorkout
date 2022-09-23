@@ -6,4 +6,11 @@
   <string name="kalorien_z_hler">Kalorien Zähler</string>
   <string name="pers_daten">Pers. Daten</string>
   <string name="schritte">Schritte</string>
+
+  <string-array name="geschlecht_array">
+    <item>weiblich</item>
+    <item>männlich</item>
+    <item>divers</item>
+    <item>keine Angabe</item>
+  </string-array>
 </resources>
