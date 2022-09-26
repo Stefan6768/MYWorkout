@@ -2,11 +2,15 @@ package com.example.mywourkout.local
 
 import android.util.Log
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.example.mywourkout.data.datamodels.User
+import com.example.mywourkout.data.datamodels.Video
+import com.example.mywourkout.remote.VideoApi
 
 const val TAG = "Repository"
 
 class RepositoryUser(private val database: UserDatabase) {
+
 
   val userList: LiveData<List<User>> = database.userDatabaseDao.getAll()
 

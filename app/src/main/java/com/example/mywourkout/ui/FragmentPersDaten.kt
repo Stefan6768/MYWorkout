@@ -33,7 +33,7 @@ class FragmentPersDaten : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
-    val myworkout = Datasource().loadMyworkout()
+   // val myworkout = Datasource().loadMyworkout()
 
     binding.returnButton.setOnClickListener {
       findNavController().navigateUp()
