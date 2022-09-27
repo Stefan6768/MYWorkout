@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
 import com.example.mywourkout.databinding.FragmentSaveUserBinding
 
@@ -38,6 +39,10 @@ class FragmentSaveUser : Fragment() {
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     super.onViewCreated(view, savedInstanceState)
+
+    binding.returnButton.setOnClickListener {
+      findNavController().navigateUp()
+    }
 
   }
 }

@@ -20,6 +20,7 @@
         <entry key="app/src/main/res/layout/fragment_kalorien.xml" value="0.345794677734375" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.15490264892578126" />
         <entry key="app/src/main/res/layout/fragment_persdaten.xml" value="0.2748626708984375" />
+        <entry key="app/src/main/res/layout/fragment_save_user.xml" value="0.30833333333333335" />
         <entry key="app/src/main/res/layout/fragment_schritte.xml" value="0.24074074074074073" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.2421829223632813" />
         <entry key="app/src/main/res/layout/fragment_sportvideo.xml" value="0.125" />

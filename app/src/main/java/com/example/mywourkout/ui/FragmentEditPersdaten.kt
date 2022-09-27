@@ -14,6 +14,12 @@ class FragmentEditPersdaten : Fragment() {
 
   private lateinit var binding: FragmentEditPersdatenBinding
 
+
+  private var geschlechtid = ""
+  private var gewichtid = ""
+  private var groesseid = ""
+  private var alterid = ""
+
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
@@ -35,6 +41,12 @@ class FragmentEditPersdaten : Fragment() {
 
     binding.returnButton.setOnClickListener {
       findNavController().navigateUp()
+    }
+
+    binding.saveButton.setOnClickListener {
+      findNavController().navigate(FragmentEditPersdatenDirections.actionFragmentEditPersdatenToFragmentSaveUser(
+        geschlechtid, groesseid,gewichtid,alterid
+      ))
     }
 
   }
