@@ -1,6 +1,7 @@
 package com.example.mywourkout.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +17,25 @@ class FragmentSaveUser : Fragment() {
 
   private lateinit var binding: FragmentSaveUserBinding
 
+  private var geschlechtid = ""
+  private var gewichtid = ""
+  private var groesseid = ""
+  private var alterid = ""
+
   private val viewModel: MainViewModel by activityViewModels()
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    arguments?.let {
+      geschlechtid = it.getString("geschlechtid")!!
+      groesseid = it.getString("groesseid")!!
+      gewichtid = it.getString("gewichtid")!!
+      alterid = it.getString("alterid")!!
+
+      Log.e("test", geschlechtid)
+
+    }
+  }
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -29,6 +48,7 @@ class FragmentSaveUser : Fragment() {
       container,
       false
     )
+
 
     // damit LiveData automatisch observed wird vom layout
     binding.lifecycleOwner = this.viewLifecycleOwner
@@ -43,6 +63,11 @@ class FragmentSaveUser : Fragment() {
     binding.returnButton.setOnClickListener {
       findNavController().navigateUp()
     }
+
+    binding.userGeschlechtText.text = geschlechtid
+    binding.userGroesseText.text = groesseid
+    binding.userGewichtText.text = gewichtid
+    binding.userAlterText.text = alterid
 
   }
 }
