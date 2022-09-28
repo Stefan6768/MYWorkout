@@ -60,8 +60,8 @@ class FragmentEditPersdaten : Fragment() {
 
 
 
-    if (binding.geschlechtSpinner != null) {
-      var geschlechtsListe: ArrayList<String> = ArrayList<String>(
+
+      val geschlechtsListe: ArrayList<String> = ArrayList<String>(
         Arrays.asList(
           *resources.getStringArray(R.array.geschlecht_array)
         )
@@ -86,7 +86,7 @@ class FragmentEditPersdaten : Fragment() {
 
         }
       }
-    }
+
 
     binding.saveButton.setOnClickListener {
       groesseid = binding.editGroesseEdit.text.toString()

@@ -61,7 +61,7 @@ class FragmentSaveUser : Fragment() {
     super.onViewCreated(view, savedInstanceState)
 
     binding.returnButton.setOnClickListener {
-      findNavController().navigateUp()
+      findNavController().navigate(FragmentSaveUserDirections.actionFragmentSaveUserToFragmentEditPersdaten())
     }
 
     binding.userGeschlechtText.text = geschlechtid
