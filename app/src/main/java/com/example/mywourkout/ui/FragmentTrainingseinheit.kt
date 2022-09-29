@@ -22,8 +22,8 @@ class FragmentTrainingseinheit : Fragment() {
     super.onCreate(savedInstanceState)
 
     if (arguments != null) {
-      stringId = arguments!!.getString("stringid").toString()
-      imageId = arguments!!.getInt("imageid")
+      stringId = requireArguments()!!.getString("stringid").toString()
+      imageId = requireArguments()!!.getInt("imageid")
     }
   }
 

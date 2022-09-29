@@ -3,36 +3,43 @@ package com.example.mywourkout.data.datamodels
 class VideoList {
 
 
-    private val _videos = loadMyworkout()
-    val videos: List<Video>
+  private val _videos = loadMyworkout()
+  val videos: List<Video>
     get() = _videos
 
   fun loadMyworkout(): List<Video> {
     return listOf(
-      Video("Arm Training 5 min", "bfohE7qM9pM"),
-      Video("Arm Training 10 min", "kn1ylukKWG8"),
-      Video("Arm Training 15 min", "JfFV-mll0xU"),
-      Video("Bauch Training 5 min", "AOSaOtWtQfc"),
-      Video("Bauch Training 10 min", "X_ZJpZgRecI"),
-      Video("Bauch Training 15 min", "D7Bo3BqOCc4"),
-      Video("Bein Training 5 min", "XI4KlbpR7ks"),
-      Video("Bein Training 10 min", "bcH-qcnpy20"),
-      Video("Bein Training 15 min", "YPATBnaK-TA"),
-      Video("Cardio Training 5 min", "sHXxk2ek1g0"),
-      Video("Cardio Training 10 min", "ympgQ2GWWcY"),
-      Video("Cardio Training 15 min", "O9jWAf98-rU"),
-      Video("Ganz Körper Training 5 min", "kic4EeXOfNw"),
-      Video("Ganz Körper Training 10 min", "_B62uXgP7aM"),
-      Video("Ganz Körper Training 15 min", "A8AzJ9ODgmw"),
-      Video("Po Training 5 min", ">zXc9ea3gyyY"),
-      Video("Po Training 10 min", "jvizLLbre8s"),
-      Video("Po Training 15 min", "Y3VqVZ1mLCI"),
-      Video("Youtube Videos 5 min", "n_8MHciI9Ks<"),
-      Video("Youtube Video 10 min", "bcH-qcnpy20"),
-      Video("Youtube Video 15 min", "YPATBnaK-TA"),
-      Video("Training Video 5 min", "XI4KlbpR7ks"),
-      Video("Training Video 10 min", "bcH-qcnpy20"),
-      Video("Training Video 15 min", "O9jWAf98-rU")
+      Video("Arm Training 5 min", "bfohE7qM9pM", "29"),
+      Video("Arm Training 10 min", "kn1ylukKWG8", "30"),
+      Video("Arm Training 15 min", "JfFV-mll0xU", "28"),
+      Video("Bauch Training 5 min", "AOSaOtWtQfc", "27"),
+      Video("Bauch Training 10 min", "X_ZJpZgRecI", "26"),
+      Video("Bauch Training 15 min", "D7Bo3BqOCc4", "25"),
+      Video("Bein Training 5 min", "XI4KlbpR7ks", "24"),
+      Video("Bein Training 10 min", "bcH-qcnpy20", "23"),
+      Video("Bein Training 15 min", "YPATBnaK-TA", "22"),
+      Video("Cardio Training 5 min", "sHXxk2ek1g0", "21"),
+      Video("Cardio Training 10 min", "ympgQ2GWWcY", "20"),
+      Video("Cardio Training 15 min", "O9jWAf98-rU", "19"),
+      Video("Ganz Körper Training 5 min", "kic4EeXOfNw", "18"),
+      Video("Ganz Körper Training 10 min", "_B62uXgP7aM", "17"),
+      Video("Ganz Körper Training 15 min", "A8AzJ9ODgmw", "16"),
+      Video("Po Training 5 min", ">zXc9ea3gyyY", "15"),
+      Video("Po Training 10 min", "jvizLLbre8s", "14"),
+      Video("Po Training 15 min", "Y3VqVZ1mLCI", "13"),
+      Video("Youtube Videos 5 min", "n_8MHciI9Ks<", "12"),
+      Video("Youtube Video 10 min", "bcH-qcnpy20", "11"),
+      Video("Youtube Video 15 min", "YPATBnaK-TA", "10"),
+      Video("Training Video 5 min", "XI4KlbpR7ks", "9"),
+      Video("Training Video 10 min", "bcH-qcnpy20", "8"),
+      Video("Training Video 15 min", "O9jWAf98-rU", "7"),
+      Video("Po Training 15 min", "Y3VqVZ1mLCI", "6"),
+      Video("Youtube Videos 5 min", "n_8MHciI9Ks<", "5"),
+      Video("Youtube Video 10 min", "bcH-qcnpy20", "4"),
+      Video("Youtube Video 15 min", "YPATBnaK-TA", "3"),
+      Video("Training Video 5 min", "XI4KlbpR7ks", "2"),
+      Video("Training Video 10 min", "bcH-qcnpy20", "1"),
+      Video("Training Video 15 min", "O9jWAf98-rU", "31")
     )
   }
 }

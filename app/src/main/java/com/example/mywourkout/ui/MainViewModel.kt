@@ -11,27 +11,27 @@ import com.example.mywourkout.data.datamodels.User
 import com.example.mywourkout.data.datamodels.Video
 import com.example.mywourkout.data.datamodels.VideoList
 import com.example.mywourkout.local.RepositoryUser
+import com.example.mywourkout.local.RepositoryVideo
 import com.example.mywourkout.local.getDatabase
+import com.example.mywourkout.remote.VideoApiService
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.launch
 
-//import com.example.mywourkout.local.getDatabase
-//import com.example.mywourkout.remote.AppRepository
-//import com.example.mywourkout.remote.VideoApi
+
 
 const val TAG = "MainViewModel"
 
-//enum class ApiStatus
+enum class ApiStatus
 
 class MainViewModel (application: Application) : AndroidViewModel(application) {
 
  // private val database = getDatabase(application)
- // private val repository = AppRepository(VideoApi, database)
+ // private val repository = RepositoryVideo(VideoApiService, database)
 
- // private val  _loading = MutableLiveData<ApiStatus>()
-//  val loading: LiveData<ApiStatus>
-//  get() = _loading
+  private val  _loading = MutableLiveData<ApiStatus>()
+  val loading: LiveData<ApiStatus>
+  get() = _loading
 
   private val database = getDatabase(application)
   private val repositoryUser = RepositoryUser(database)
