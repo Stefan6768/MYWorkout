@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
 import com.example.mywourkout.data.datamodels.Video
 import com.example.mywourkout.data.datamodels.VideoList
@@ -67,5 +68,14 @@ class FragmentVideoDay : Fragment() {
 
       }
     })
+
+    binding.returnButton.setOnClickListener {
+      findNavController().navigateUp()
+    }
+
+    binding.homeButton.setOnClickListener {
+      findNavController().navigate(FragmentVideoDayDirections.actionFragmentVideoDayToStartFragment())
+    }
+
   }
 }
