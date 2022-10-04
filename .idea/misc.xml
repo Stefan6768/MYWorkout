@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.365" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.125" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.365" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_user.xml" value="0.17238183503243745" />
@@ -21,7 +22,7 @@
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.15490264892578126" />
         <entry key="app/src/main/res/layout/fragment_persdaten.xml" value="0.2748626708984375" />
         <entry key="app/src/main/res/layout/fragment_save_user.xml" value="0.30833333333333335" />
-        <entry key="app/src/main/res/layout/fragment_schritte.xml" value="0.24074074074074073" />
+        <entry key="app/src/main/res/layout/fragment_schritte.xml" value="0.18254699707031247" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.2421829223632813" />
         <entry key="app/src/main/res/layout/fragment_sportvideo.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_start.xml" value="0.19280242919921875" />

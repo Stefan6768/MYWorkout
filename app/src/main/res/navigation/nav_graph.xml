@@ -99,8 +99,8 @@
   </fragment>
   <fragment
       android:id="@+id/fragmentSchritte"
-      android:name="com.example.mywourkout.ui.FragmentSchritte"
-      tools:layout="@layout/fragment_schritte"
+      android:name="com.example.mywourkout.ui.FragmentSchritteActivity"
+      tools:layout="@layout/fragment_schritte_activity"
       android:label="FragmentSchritte" >
     <action
         android:id="@+id/action_fragmentSchritte_to_startFragment2"
