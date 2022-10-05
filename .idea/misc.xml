@@ -23,6 +23,7 @@
         <entry key="app/src/main/res/layout/fragment_persdaten.xml" value="0.2748626708984375" />
         <entry key="app/src/main/res/layout/fragment_save_user.xml" value="0.30833333333333335" />
         <entry key="app/src/main/res/layout/fragment_schritte.xml" value="0.18254699707031247" />
+        <entry key="app/src/main/res/layout/fragment_schritte_activity.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.2421829223632813" />
         <entry key="app/src/main/res/layout/fragment_sportvideo.xml" value="0.125" />
         <entry key="app/src/main/res/layout/fragment_start.xml" value="0.19280242919921875" />

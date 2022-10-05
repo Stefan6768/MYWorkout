@@ -61,7 +61,7 @@ class FragmentSportVideo : Fragment() {
         val video: Video? = viewModel.videos.find { it.id == searchid  }
         if (video != null) {
           Log.d(TAG,"video found $video.video")
-          youTubePlayer.loadVideo(video.video, 4f)
+          youTubePlayer.loadVideo(video.video, 10f)
         }
 
       }

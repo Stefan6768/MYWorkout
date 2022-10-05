@@ -13,8 +13,8 @@ class Datasource {
       Workout("Cardio Training", R.drawable.workout4),
       Workout("Ganz Körper Training", R.drawable.workout5),
       Workout("Po Training", R.drawable.workout6),
-      Workout("Youtube Video", R.drawable.workout7),
-      Workout("Training Video", R.drawable.workout8),
+      Workout("Yoga Training", R.drawable.workout7),
+      Workout("BOP Training", R.drawable.workout8),
       )
   }
 }

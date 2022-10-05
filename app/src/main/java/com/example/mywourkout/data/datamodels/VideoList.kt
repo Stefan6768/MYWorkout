@@ -27,19 +27,19 @@ class VideoList {
       Video("Po Training 5 min", ">zXc9ea3gyyY", "15"),
       Video("Po Training 10 min", "jvizLLbre8s", "14"),
       Video("Po Training 15 min", "Y3VqVZ1mLCI", "13"),
-      Video("Youtube Videos 5 min", "n_8MHciI9Ks<", "12"),
-      Video("Youtube Video 10 min", "bcH-qcnpy20", "11"),
-      Video("Youtube Video 15 min", "YPATBnaK-TA", "10"),
-      Video("Training Video 5 min", "XI4KlbpR7ks", "9"),
-      Video("Training Video 10 min", "bcH-qcnpy20", "8"),
-      Video("Training Video 15 min", "O9jWAf98-rU", "7"),
+      Video("Yoga Videos 5 min", "v=2SyGLbXtS68<", "12"),
+      Video("Yoga Video 10 min", "v=7Av1kR5TnIA", "11"),
+      Video("Yoga Video 15 min", "v=dmlicWfwftA", "10"),
+      Video("BOP Video 5 min", "v=yu5-uyQO1Mg", "9"),
+      Video("BOP Video 10 min", "v=W8yVlnW0fZ4", "8"),
+      Video("BOP Video 15 min", "v=2RRArWkRcPc", "7"),
       Video("Po Training 15 min", "Y3VqVZ1mLCI", "6"),
-      Video("Youtube Videos 5 min", "n_8MHciI9Ks<", "5"),
-      Video("Youtube Video 10 min", "bcH-qcnpy20", "4"),
-      Video("Youtube Video 15 min", "YPATBnaK-TA", "3"),
-      Video("Training Video 5 min", "XI4KlbpR7ks", "2"),
-      Video("Training Video 10 min", "bcH-qcnpy20", "1"),
-      Video("Training Video 15 min", "O9jWAf98-rU", "31")
+      Video("Yoga Video 5 min", "n_8MHciI9Ks<", "5"),
+      Video("Yoga Video 10 min", "bcH-qcnpy20", "4"),
+      Video("Yoga Video 15 min", "YPATBnaK-TA", "3"),
+      Video("BOP Video 5 min", "XI4KlbpR7ks", "2"),
+      Video("BOP Video 10 min", "bcH-qcnpy20", "1"),
+      Video("BOP Video 15 min", "O9jWAf98-rU", "31")
     )
   }
 }
