@@ -25,7 +25,6 @@ class FragmentSportVideo : Fragment() {
 
   private var video = ""
   private var length = ""
-  private var trainingId = ""
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -34,8 +33,6 @@ class FragmentSportVideo : Fragment() {
       arguments?.let {
         video = it.getString("video", "")
         length = it.getString("length", "")
-        trainingId = it.getString("trainingsId", "")
-
 
       }
 
@@ -63,7 +60,7 @@ class FragmentSportVideo : Fragment() {
       binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
         override fun onReady(youTubePlayer: YouTubePlayer) {
 
-          val searchid = video + " " + length + trainingId
+          val searchid = video + " " + length
 
           println("searchid=$searchid")
 
@@ -81,6 +78,6 @@ class FragmentSportVideo : Fragment() {
         findNavController().navigateUp()
       }
 
-      binding.trainingText.text = trainingId
+      binding.trainingText.text = video
     }
 }

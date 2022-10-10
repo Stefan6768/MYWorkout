@@ -17,7 +17,6 @@ class FragmentTrainingseinheit : Fragment() {
 
   private var stringId = ""
   private var imageId = 0
-  private var trainingsId = ""
 
 
   override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +25,6 @@ class FragmentTrainingseinheit : Fragment() {
     if (arguments != null) {
       stringId = requireArguments()!!.getString("stringid").toString()
       imageId = requireArguments()!!.getInt("imageid")
-      trainingsId = requireArguments()!!.getString("trainingsId").toString()
     }
   }
 
@@ -49,7 +47,7 @@ class FragmentTrainingseinheit : Fragment() {
     binding.min5Button.setOnClickListener {
       findNavController().navigate(
         FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
-          stringId, "5 min", trainingsId
+          stringId, "5 min"
         )
       )
     }
@@ -57,7 +55,7 @@ class FragmentTrainingseinheit : Fragment() {
     binding.min10Button.setOnClickListener {
       findNavController().navigate(
         FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
-          stringId, "10 min", trainingsId
+          stringId, "10 min"
         )
       )
     }
@@ -65,7 +63,7 @@ class FragmentTrainingseinheit : Fragment() {
     binding.min15Button.setOnClickListener {
       findNavController().navigate(
         FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
-          stringId, "15 min", trainingsId
+          stringId, "15 min"
         )
       )
     }
