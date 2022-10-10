@@ -30,54 +30,52 @@ class FragmentSportVideo : Fragment() {
     super.onCreate(savedInstanceState)
 
 
-      arguments?.let {
-        video = it.getString("video", "")
-        length = it.getString("length", "")
-
-      }
+    arguments?.let {
+      video = it.getString("video", "")
+      length = it.getString("length", "")
 
     }
+  }
+
+  override fun onCreateView(
+    inflater: LayoutInflater,
+    container: ViewGroup?,
+    savedInstanceState: Bundle?
+  ): View? {
+    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sportvideo, container, false)
+
+    return binding.root
+  }
+
+  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
+    lifecycle.addObserver(binding.youtubePlayerView)
 
 
-    override fun onCreateView(
-      inflater: LayoutInflater,
-      container: ViewGroup?,
-      savedInstanceState: Bundle?
-    ): View? {
-      binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sportvideo, container, false)
-
-      return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-      super.onViewCreated(view, savedInstanceState)
-      lifecycle.addObserver(binding.youtubePlayerView)
 
 
 
+    binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+      override fun onReady(youTubePlayer: YouTubePlayer) {
 
+        val searchid = video + " " + length
 
-      binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
-        override fun onReady(youTubePlayer: YouTubePlayer) {
+        println("searchid=$searchid")
 
-          val searchid = video + " " + length
-
-          println("searchid=$searchid")
-
-          //val videoId = resources.getString(searchid.toInt())
-          val video: Video? = viewModel.videos.find { it.id == searchid }
-          if (video != null) {
-            Log.d(TAG, "video found $video.video")
-            youTubePlayer.loadVideo(video.video, 10f)
-          }
-
+        //val videoId = resources.getString(searchid.toInt())
+        val video: Video? = viewModel.videos.find { it.id == searchid }
+        if (video != null) {
+          Log.d(TAG, "video found $video.video")
+          youTubePlayer.loadVideo(video.video, 10f)
         }
-      })
 
-      binding.imageButton2.setOnClickListener {
-        findNavController().navigateUp()
       }
+    })
 
-      binding.trainingText.text = video
+    binding.imageButton2.setOnClickListener {
+      findNavController().navigateUp()
     }
+
+    binding.trainingText.text = video
+  }
 }
