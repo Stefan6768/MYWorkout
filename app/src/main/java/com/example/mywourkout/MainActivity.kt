@@ -23,18 +23,9 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 /**
  * Main Activity dient als Einstiegspunkt für die App
  */
-class MainActivity : AppCompatActivity(), SensorEventListener {
-
-  private var sensorManager: SensorManager? = null
+class MainActivity : AppCompatActivity() {
 
 
-  private var running = false
-
-
-  private var totalSteps = 0f
-
-
-  private var previousTotalSteps = 0f
 
   /*   Klassen Variablen   */
 
@@ -54,11 +45,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
 
-    loadData()
-    resetSteps()
-
-    sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-
     // Das Binding zur XML-Datei
     binding = ActivityMainBinding.inflate(layoutInflater)
     setContentView(binding.root)
@@ -69,66 +55,4 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
 
   }
-
-  override fun onResume() {
-    super.onResume()
-    running = true
-
-
-    val stepSensor = sensorManager?.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
-
-
-    if (stepSensor == null) {
-
-      Toast.makeText(this, "No sensor detected on this device", Toast.LENGTH_SHORT).show()
-    } else {
-
-      sensorManager?.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_UI)
-    }
-  }
-
-  override fun onSensorChanged(event: SensorEvent?) {
-    val tv_stepsTaken = findViewById<TextView>(R.id.steps_text)
-
-    if (running) {
-      totalSteps = event!!.values[0]
-
-
-      val currentSteps = totalSteps.toInt() - previousTotalSteps.toInt()
-
-
-      tv_stepsTaken.text = ("$currentSteps")
-    }
-  }
-
-  private fun resetSteps() {
-
-
-    val sharedPreferences = getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
-
-    val editor = sharedPreferences.edit()
-    editor.putFloat("key1", previousTotalSteps)
-    editor.apply()
-  }
-
-
-
-
-
-  private fun loadData() {
-
-
-    val sharedPreferences = getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
-    val savedNumber = sharedPreferences.getFloat("key1", 0f)
-
-
-    Log.d("MainActivity", "$savedNumber")
-
-    previousTotalSteps = savedNumber
-  }
-
-  override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-
-  }
-
 }

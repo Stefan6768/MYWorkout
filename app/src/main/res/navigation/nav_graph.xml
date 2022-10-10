@@ -120,9 +120,6 @@
     <argument
         android:name="length"
         app:argType="string" />
-    <argument
-        android:name="trainingId"
-        app:argType="string" />
   </fragment>
   <fragment
       android:id="@+id/fragmentEditPersdaten"

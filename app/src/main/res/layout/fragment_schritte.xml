@@ -63,7 +63,7 @@
         app:layout_constraintTop_toTopOf="@+id/circle_image" />
 
     <TextView
-        android:id="@+id/zähl_text"
+        android:id="@+id/stepsValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -74,8 +74,7 @@
         app:layout_constraintEnd_toEndOf="@+id/circle_image"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="@+id/circle_image"
-        app:layout_constraintTop_toBottomOf="@+id/steps_text"
-        tools:text="0" />
+        app:layout_constraintTop_toBottomOf="@+id/steps_text" />
 
     <ImageButton
         android:id="@+id/return_button"
