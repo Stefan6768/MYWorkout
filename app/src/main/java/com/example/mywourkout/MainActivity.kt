@@ -1,5 +1,6 @@
 package com.example.mywourkout
 
+import android.animation.ObjectAnimator
 import android.content.Context
 import android.hardware.Sensor
 import android.hardware.SensorEvent
@@ -8,6 +9,7 @@ import android.hardware.SensorManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.NavController
@@ -40,6 +42,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
   private lateinit var navController: NavController
 
+
   /*  Lifecycle  */
 
   /**
@@ -64,6 +67,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
 
     binding.bottomNav.setupWithNavController(navController)
 
+
   }
 
   override fun onResume() {
@@ -84,7 +88,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
   }
 
   override fun onSensorChanged(event: SensorEvent?) {
-    val tv_stepsTaken = findViewById<TextView>(R.id.tv_stepsTaken)
+    val tv_stepsTaken = findViewById<TextView>(R.id.steps_text)
 
     if (running) {
       totalSteps = event!!.values[0]
@@ -98,24 +102,6 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
   }
 
   private fun resetSteps() {
-    val tv_stepsTaken = findViewById<TextView>(R.id.tv_stepsTaken)
-    //tv_stepsTaken.setOnClickListener {
-
-     //Toast.makeText(this, "Long tap to reset steps", Toast.LENGTH_SHORT).show()
-    //}
-
-    //tv_stepsTaken.setOnLongClickListener {
-
-     //previousTotalSteps = totalSteps
-
-
-    // tv_stepsTaken.text = 0.toString()
-
-     // saveData()
-     // true }
-  //}
-
-  //private fun saveData() {
 
 
     val sharedPreferences = getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
@@ -124,6 +110,10 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     editor.putFloat("key1", previousTotalSteps)
     editor.apply()
   }
+
+
+
+
 
   private fun loadData() {
 

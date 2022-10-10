@@ -1,5 +1,8 @@
 package com.example.mywourkout.ui
 
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +15,7 @@ import com.example.mywourkout.R
 import com.example.mywourkout.databinding.FragmentSchritteBinding
 
 
-class FragmentSchritte : Fragment() {
+class FragmentSchritte : Fragment(), SensorEventListener {
 
   private lateinit var binding: FragmentSchritteBinding
 
@@ -20,6 +23,9 @@ class FragmentSchritte : Fragment() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
   }
+
+
+
 
   override fun onCreateView(
     inflater: LayoutInflater,
@@ -41,5 +47,13 @@ class FragmentSchritte : Fragment() {
     binding.returnButton.setOnClickListener {
       findNavController().navigateUp()
     }
+  }
+
+  override fun onSensorChanged(p0: SensorEvent?) {
+    TODO("Not yet implemented")
+  }
+
+  override fun onAccuracyChanged(p0: Sensor?, p1: Int) {
+    TODO("Not yet implemented")
   }
 }

@@ -12,7 +12,7 @@
       android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/hintergrund_image"
         android:layout_width="651dp"
         android:layout_height="1003dp"
         android:backgroundTint="#B3C7F0"

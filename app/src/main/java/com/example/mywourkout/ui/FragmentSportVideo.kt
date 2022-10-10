@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.mywourkout.R
 import com.example.mywourkout.databinding.FragmentSportvideoBinding
 import com.example.mywourkout.data.datamodels.Video
+import com.example.mywourkout.data.datamodels.VideoList
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
 
@@ -19,57 +20,67 @@ class FragmentSportVideo : Fragment() {
 
   private lateinit var binding: FragmentSportvideoBinding
 
-  private val viewModel:MainViewModel by activityViewModels()
+  private val viewModel: MainViewModel by activityViewModels()
+
 
   private var video = ""
   private var length = ""
+  private var trainingId = ""
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    arguments?.let {
-      video = it.getString("video","")
-      length = it.getString("length","")
-    }
-
-  }
 
 
-  override fun onCreateView(
-    inflater: LayoutInflater,
-    container: ViewGroup?,
-    savedInstanceState: Bundle?
-  ): View? {
-    binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sportvideo, container, false)
+      arguments?.let {
+        video = it.getString("video", "")
+        length = it.getString("length", "")
+        trainingId = it.getString("trainingsId", "")
 
-    return binding.root
-  }
-
-  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-    super.onViewCreated(view, savedInstanceState)
-    lifecycle.addObserver(binding.youtubePlayerView)
-
-
-
-    binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
-      override fun onReady(youTubePlayer: YouTubePlayer) {
-
-        val searchid = video + " " +  length
-
-        println("searchid=$searchid")
-
-        //val videoId = resources.getString(searchid.toInt())
-        val video: Video? = viewModel.videos.find { it.id == searchid  }
-        if (video != null) {
-          Log.d(TAG,"video found $video.video")
-          youTubePlayer.loadVideo(video.video, 10f)
-        }
 
       }
-    })
 
-    binding.imageButton2.setOnClickListener {
-      findNavController().navigateUp()
     }
 
-  }
+
+    override fun onCreateView(
+      inflater: LayoutInflater,
+      container: ViewGroup?,
+      savedInstanceState: Bundle?
+    ): View? {
+      binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sportvideo, container, false)
+
+      return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+      super.onViewCreated(view, savedInstanceState)
+      lifecycle.addObserver(binding.youtubePlayerView)
+
+
+
+
+
+      binding.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+        override fun onReady(youTubePlayer: YouTubePlayer) {
+
+          val searchid = video + " " + length + trainingId
+
+          println("searchid=$searchid")
+
+          //val videoId = resources.getString(searchid.toInt())
+          val video: Video? = viewModel.videos.find { it.id == searchid }
+          if (video != null) {
+            Log.d(TAG, "video found $video.video")
+            youTubePlayer.loadVideo(video.video, 10f)
+          }
+
+        }
+      })
+
+      binding.imageButton2.setOnClickListener {
+        findNavController().navigateUp()
+      }
+
+      binding.trainingText.text = trainingId
+    }
 }

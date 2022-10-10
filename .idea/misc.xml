@@ -21,6 +21,8 @@
         <entry key="app/src/main/res/layout/fragment_kalorien.xml" value="0.345794677734375" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.15490264892578126" />
         <entry key="app/src/main/res/layout/fragment_persdaten.xml" value="0.2748626708984375" />
+        <entry key="app/src/main/res/layout/fragment_player.xml" value="0.12037037037037036" />
+        <entry key="app/src/main/res/layout/fragment_recycler.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_save_user.xml" value="0.30833333333333335" />
         <entry key="app/src/main/res/layout/fragment_schritte.xml" value="0.18254699707031247" />
         <entry key="app/src/main/res/layout/fragment_schritte_activity.xml" value="0.1" />
@@ -38,7 +40,7 @@
         <entry key="app/src/main/res/layout/save_user_item.xml" value="0.2507598876953125" />
         <entry key="app/src/main/res/layout/user_item.xml" value="0.20481927710843373" />
         <entry key="app/src/main/res/layout/user_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/video_item.xml" value="0.26804123711340205" />
+        <entry key="app/src/main/res/layout/video_item.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.23121387283236994" />
       </map>
     </option>

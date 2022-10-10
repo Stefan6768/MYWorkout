@@ -13,10 +13,12 @@ import com.example.mywourkout.databinding.FragmentTrainingseinheitBinding
 
 class FragmentTrainingseinheit : Fragment() {
 
- private lateinit var binding: FragmentTrainingseinheitBinding
+  private lateinit var binding: FragmentTrainingseinheitBinding
 
   private var stringId = ""
   private var imageId = 0
+  private var trainingsId = ""
+
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -24,6 +26,7 @@ class FragmentTrainingseinheit : Fragment() {
     if (arguments != null) {
       stringId = requireArguments()!!.getString("stringid").toString()
       imageId = requireArguments()!!.getInt("imageid")
+      trainingsId = requireArguments()!!.getString("trainingsId").toString()
     }
   }
 
@@ -44,26 +47,31 @@ class FragmentTrainingseinheit : Fragment() {
     }
 
     binding.min5Button.setOnClickListener {
-      findNavController().navigate(FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
-        stringId, "5 min"
-      ))
+      findNavController().navigate(
+        FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
+          stringId, "5 min", trainingsId
+        )
+      )
     }
 
-    binding.min10Button.setOnClickListener{
-      findNavController().navigate(FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
-        stringId, "10 min"
-      ))
+    binding.min10Button.setOnClickListener {
+      findNavController().navigate(
+        FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
+          stringId, "10 min", trainingsId
+        )
+      )
     }
 
     binding.min15Button.setOnClickListener {
-     findNavController().navigate(FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
-       stringId, "15 min"
-     ))
+      findNavController().navigate(
+        FragmentTrainingseinheitDirections.actionFragmentZweiToFragmentSportVideo(
+          stringId, "15 min", trainingsId
+        )
+      )
     }
 
     binding.detailImage.setImageResource(imageId)
 
     binding.detailText.text = stringId
   }
-
 }

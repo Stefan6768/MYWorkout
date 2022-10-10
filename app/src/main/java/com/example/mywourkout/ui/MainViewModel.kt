@@ -3,10 +3,7 @@ package com.example.mywourkout.ui
 import android.app.Application
 import android.security.identity.AccessControlProfileId
 import android.util.Log
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.example.mywourkout.data.datamodels.User
 import com.example.mywourkout.data.datamodels.Video
 import com.example.mywourkout.data.datamodels.VideoList
@@ -17,7 +14,8 @@ import com.example.mywourkout.remote.VideoApiService
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.coroutines.launch
-
+import java.lang.reflect.Array.get
+import kotlin.TODO as TODO1
 
 
 const val TAG = "MainViewModel"
@@ -66,6 +64,10 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
   fun unsetComplete() {
     _complete.value = false
   }
+
+ // private var _schritte = MutableLiveData<Int>()
+ // var schritte:
+   // get() = _schritte
 
 
 

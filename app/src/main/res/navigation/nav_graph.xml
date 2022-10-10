@@ -36,9 +36,6 @@
     <action
         android:id="@+id/action_fragmentEins_to_startFragment"
         app:destination="@id/startFragment" />
-    <action
-        android:id="@+id/action_fragmentEins_to_fragmentDrei"
-        app:destination="@id/fragmentPlayer" />
   </fragment>
   <fragment
       android:id="@+id/fragmentTrainingseinheit"
@@ -54,15 +51,6 @@
     <action
         android:id="@+id/action_fragmentZwei_to_fragmentSportVideo"
         app:destination="@id/fragmentSportVideo" />
-  </fragment>
-  <fragment
-      android:id="@+id/fragmentPlayer"
-      android:name="com.example.mywourkout.ui.FragmentPlayer"
-      android:label="FragmentPlayer"
-      tools:layout="@layout/fragment_player">
-    <action
-        android:id="@+id/action_fragmentDrei_to_fragmentEins"
-        app:destination="@id/fragmentRecycler" />
   </fragment>
   <fragment
       android:id="@+id/loginFragment"
@@ -131,6 +119,9 @@
         app:argType="string" />
     <argument
         android:name="length"
+        app:argType="string" />
+    <argument
+        android:name="trainingId"
         app:argType="string" />
   </fragment>
   <fragment
