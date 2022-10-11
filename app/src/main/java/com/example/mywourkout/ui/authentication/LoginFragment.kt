@@ -14,6 +14,9 @@ import com.example.mywourkout.R
 import com.example.mywourkout.databinding.FragmentLoginBinding
 import com.example.mywourkout.ui.MainViewModel
 
+/**
+ * LoginFragment enthält das Login UI
+ */
 class LoginFragment : Fragment() {
 
   private lateinit var binding: FragmentLoginBinding

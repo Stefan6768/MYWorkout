@@ -1,7 +1,12 @@
 package com.example.mywourkout.data.datamodels
 
-data class Video (
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class Video(
+  @PrimaryKey
   val id: String,
   val video: String,
   val tag: String
-        )
+)

@@ -35,7 +35,7 @@
         android:id="@+id/user_geschlecht_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="20dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -43,14 +43,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@+id/myworkout_image"
         tools:text="Geschlecht" />
 
     <TextView
         android:id="@+id/user_groesse_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="52dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -64,7 +64,7 @@
         android:id="@+id/user_gewicht_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="52dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -78,7 +78,7 @@
         android:id="@+id/user_alter_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="52dp"
         android:text="TextView"
         android:textColor="#000000"
         android:textSize="30sp"
@@ -108,6 +108,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/myworkout_image"
+        android:layout_width="221dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/user_geschlecht_text"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/user_geschlecht_text"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar7"
+        app:srcCompat="@drawable/yourfitness" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

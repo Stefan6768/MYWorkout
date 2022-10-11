@@ -2,6 +2,7 @@ package com.example.mywourkout.ui
 
 import android.os.Bundle
 import android.sax.StartElementListener
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,29 +34,29 @@ class StartFragment : Fragment() {
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    super.onViewCreated(view, savedInstanceState)
 
     binding.startButton.setOnClickListener {
       findNavController().navigate(StartFragmentDirections.actionStartFragmentToFragmentEins())
-      
+
     }
 
     binding.logoutButton.setOnClickListener {
       viewModel.logout()
     }
 
-  viewModel.currentUser.observe(
+    viewModel.currentUser.observe(
       viewLifecycleOwner,
       Observer {
         if (it == null) {
           findNavController().navigate(R.id.loginFragment)
         } else {
-          if (viewModel.guest == false ) {
+          if (viewModel.guest == true) {
             binding.itemText.text = "Hallo Gast ! Viel Spass !"
           } else {
             userMail = it.email.toString()
             binding.itemText.text = "Hallo $userMail! Viel Spass !"
           }
-
         }
       }
     )

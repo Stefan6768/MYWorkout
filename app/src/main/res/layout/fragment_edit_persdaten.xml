@@ -24,23 +24,13 @@
         app:layout_constraintVertical_bias="0.321"
         app:srcCompat="@drawable/hintergrund" />
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar4"
-        android:layout_width="411dp"
-        android:layout_height="55dp"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageButton
         android:id="@+id/return_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:backgroundTint="#B3C7F0"
-        app:layout_constraintStart_toStartOf="@+id/toolbar4"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_baseline_arrow_back_24"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
@@ -49,41 +39,31 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="16dp"
         android:text="Persönliche Daten"
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/toolbar4"
+        app:layout_constraintEnd_toEndOf="@+id/pers_image"
         app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="@+id/toolbar4"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar4" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="380dp"
-        android:layout_height="240dp"
-        android:layout_marginTop="22dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:srcCompat="@drawable/persdaten" />
+        app:layout_constraintStart_toStartOf="@+id/pers_image"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/geschlecht_spinner"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:background="@color/fitness_background"
         android:backgroundTint="#B3C7F0"
         android:clickable="false"
         android:entries="@array/geschlecht_array"
         android:spinnerMode="dropdown"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/imageView7"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="@+id/pers_image"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/pers_image"
+        app:layout_constraintTop_toBottomOf="@+id/pers_image"
         tools:ignore="TouchTargetSizeCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -160,6 +140,16 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/edit_alter_textfield"
         app:layout_constraintTop_toBottomOf="@+id/edit_alter_textfield" />
+
+    <ImageView
+        android:id="@+id/pers_image"
+        android:layout_width="385dp"
+        android:layout_height="237dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/pers" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

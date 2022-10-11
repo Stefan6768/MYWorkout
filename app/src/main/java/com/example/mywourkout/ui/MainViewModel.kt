@@ -22,14 +22,14 @@ const val TAG = "MainViewModel"
 
 enum class ApiStatus
 
-class MainViewModel (application: Application) : AndroidViewModel(application) {
+class MainViewModel(application: Application) : AndroidViewModel(application) {
 
- // private val database = getDatabase(application)
- // private val repository = RepositoryVideo(VideoApiService, database)
+  // private val database = getDatabase(application)
+  // private val repository = RepositoryVideo(VideoApiService, database)
 
-  private val  _loading = MutableLiveData<ApiStatus>()
+  private val _loading = MutableLiveData<ApiStatus>()
   val loading: LiveData<ApiStatus>
-  get() = _loading
+    get() = _loading
 
   private val database = getDatabase(application)
   private val repositoryUser = RepositoryUser(database)
@@ -38,7 +38,7 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
 
   private val _complete = MutableLiveData<Boolean>()
   val complete: LiveData<Boolean>
-  get() = _complete
+    get() = _complete
 
   fun insertUser(user: User) {
     viewModelScope.launch {
@@ -65,10 +65,9 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
     _complete.value = false
   }
 
- // private var _schritte = MutableLiveData<Int>()
- // var schritte:
-   // get() = _schritte
-
+  // private var _schritte = MutableLiveData<Int>()
+  // var schritte:
+  // get() = _schritte
 
 
   private val videolist = VideoList()
@@ -78,19 +77,16 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
     get() = _videos
 
 
-
   // Kommunikationspunkt mit der FirebaseAuth
   private val firebaseAuth = FirebaseAuth.getInstance()
 
-  private var _guest = false
   var guest: Boolean = false
-    get() = _guest
+
 
   // currentuser ist null wenn niemand eingeloggt ist
   private val _currentUser = MutableLiveData<FirebaseUser?>(firebaseAuth.currentUser)
   val currentUser: LiveData<FirebaseUser?>
-  get() = _currentUser
-
+    get() = _currentUser
 
 
   fun signup(email: String, password: String) {
@@ -98,7 +94,7 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
       if (it.isSuccessful) {
         login(email, password)
       } else {
-        Log.e(TAG,"SignUp failed: ${it.exception}")
+        Log.e(TAG, "SignUp failed: ${it.exception}")
       }
     }
   }
@@ -106,20 +102,23 @@ class MainViewModel (application: Application) : AndroidViewModel(application) {
   fun login(email: String, password: String) {
     firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
       if (it.isSuccessful) {
-              _currentUser.value = firebaseAuth.currentUser
         guest = false
+        _currentUser.value = firebaseAuth.currentUser
+
       } else {
-        Log.e(TAG,"Login failed: ${it.exception}")
+        Log.e(TAG, "Login failed: ${it.exception}")
       }
     }
   }
+
   fun anonymLogin() {
     firebaseAuth.signInAnonymously().addOnCompleteListener {
       if (it.isSuccessful) {
-        _currentUser.value = firebaseAuth.currentUser
         guest = true
+        _currentUser.value = firebaseAuth.currentUser
+
       } else {
-        Log.e(TAG,"Anonym Login failed: ${it.exception}")
+        Log.e(TAG, "Anonym Login failed: ${it.exception}")
       }
     }
   }

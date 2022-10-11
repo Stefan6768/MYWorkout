@@ -44,7 +44,7 @@ class FragmentSchritte : Fragment(), SensorEventListener {
 
     if (stepSensor == null) {
 
-      Toast.makeText(requireContext(), "No sensor detected on this device", Toast.LENGTH_SHORT).show()
+      Toast.makeText(requireContext(), "Kein Sensor gefunden !!", Toast.LENGTH_SHORT).show()
     } else {
 
       sensorManager?.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_UI)

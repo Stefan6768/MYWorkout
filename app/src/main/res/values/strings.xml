@@ -3,7 +3,7 @@
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
   <string name="kalender">Kalender</string>
-  <string name="kalorien_z_hler">Kalorien Zähler</string>
+  <string name="kalorien">Kalorien Zähler</string>
   <string name="pers_daten">Pers. Daten</string>
   <string name="schritte">Schritte</string>
 

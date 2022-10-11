@@ -13,6 +13,9 @@ import com.example.mywourkout.R
 import com.example.mywourkout.databinding.FragmentSignupBinding
 import com.example.mywourkout.ui.MainViewModel
 
+/**
+ * SignUpFragment enthält das UI um einen neuen User zu registrieren
+ */
 class SignUpFragment : Fragment() {
 
   private val viewModel: MainViewModel by activityViewModels()

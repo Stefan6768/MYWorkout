@@ -14,11 +14,11 @@
         <entry key="app/src/main/res/layout/fragment_1.xml" value="0.16332855224609377" />
         <entry key="app/src/main/res/layout/fragment_2.xml" value="0.31614583333333335" />
         <entry key="app/src/main/res/layout/fragment_drei.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/fragment_edit_persdaten.xml" value="0.26668853759765626" />
+        <entry key="app/src/main/res/layout/fragment_edit_persdaten.xml" value="0.13690476190476192" />
         <entry key="app/src/main/res/layout/fragment_eins.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_fuenf.xml" value="0.1774948120117187" />
         <entry key="app/src/main/res/layout/fragment_kalender.xml" value="0.13677452557513514" />
-        <entry key="app/src/main/res/layout/fragment_kalorien.xml" value="0.345794677734375" />
+        <entry key="app/src/main/res/layout/fragment_kalorien.xml" value="0.34149326805385555" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.15490264892578126" />
         <entry key="app/src/main/res/layout/fragment_persdaten.xml" value="0.2748626708984375" />
         <entry key="app/src/main/res/layout/fragment_player.xml" value="0.12037037037037036" />
@@ -28,7 +28,7 @@
         <entry key="app/src/main/res/layout/fragment_schritte_activity.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_signup.xml" value="0.2421829223632813" />
         <entry key="app/src/main/res/layout/fragment_sportvideo.xml" value="0.125" />
-        <entry key="app/src/main/res/layout/fragment_start.xml" value="0.19280242919921875" />
+        <entry key="app/src/main/res/layout/fragment_start.xml" value="0.14124293785310735" />
         <entry key="app/src/main/res/layout/fragment_start1.xml" value="0.4385635375976561" />
         <entry key="app/src/main/res/layout/fragment_trainingseinheit.xml" value="0.10773834972210346" />
         <entry key="app/src/main/res/layout/fragment_user_main.xml" value="0.1" />

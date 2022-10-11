@@ -20,48 +20,23 @@
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423"
+        app:layout_constraintVertical_bias="0.25"
         app:srcCompat="@drawable/hintergrund" />
-
-    <ImageView
-        android:id="@+id/workout_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="248dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/workout_image" />
-
-    <TextView
-        android:id="@+id/item_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/workout_image"
-        app:layout_constraintEnd_toEndOf="@+id/workout_image"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/workout_image" />
 
     <Button
         android:id="@+id/start_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="56dp"
         android:backgroundTint="#B3C7F0"
         android:text="Starte My Workout"
         android:textColor="#000000"
         android:textSize="20sp"
         android:textStyle="bold"
         app:cornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/workout_image"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/workout_image"
-        app:layout_constraintTop_toBottomOf="@+id/workout_image" />
+        app:layout_constraintEnd_toEndOf="@+id/myworkout_image"
+        app:layout_constraintStart_toStartOf="@+id/myworkout_image"
+        app:layout_constraintTop_toBottomOf="@+id/myworkout_image" />
 
     <Button
         android:id="@+id/logout_button"
@@ -82,14 +57,40 @@
         android:id="@+id/app_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
+        android:layout_marginTop="56dp"
         android:text="My Workout"
         android:textColor="#000000"
         android:textSize="40sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/item_text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/myworkout_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_text"
+        app:srcCompat="@drawable/yourfitness" />
+
+    <TextView
+        android:id="@+id/item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/app_text"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="@+id/app_text"
+        app:layout_constraintTop_toBottomOf="@+id/app_text"
+        tools:text="Hallo Willkommen" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

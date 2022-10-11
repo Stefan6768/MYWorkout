@@ -30,21 +30,9 @@
         android:textColor="#000000"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/persdaten_image"
-        app:layout_constraintEnd_toEndOf="@+id/persdaten_image"
-        app:layout_constraintStart_toStartOf="@+id/persdaten_image"
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/return_button" />
-
-    <ImageView
-        android:id="@+id/persdaten_image"
-        android:layout_width="382dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="136dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/persdaten" />
 
     <ImageButton
         android:id="@+id/return_button"
@@ -72,14 +60,13 @@
         android:id="@+id/geschlecht_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="48dp"
         android:text="Geschlecht"
         android:textColor="#000000"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/persdaten_image"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="@+id/persdaten_image"
-        app:layout_constraintTop_toBottomOf="@+id/persdaten_image" />
+        app:layout_constraintEnd_toEndOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
     <TextView
         android:id="@+id/groesse_text"
@@ -116,6 +103,17 @@
         app:layout_constraintEnd_toEndOf="@+id/gewicht_text"
         app:layout_constraintStart_toStartOf="@+id/gewicht_text"
         app:layout_constraintTop_toBottomOf="@+id/gewicht_text" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/persdaten_text"
+        app:srcCompat="@drawable/pers" />
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

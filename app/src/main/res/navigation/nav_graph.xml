@@ -24,6 +24,9 @@
     <action
         android:id="@+id/action_startFragment_to_loginFragment"
         app:destination="@id/loginFragment" />
+    <action
+        android:id="@+id/action_startFragment_to_fragmentKalorien"
+        app:destination="@id/fragmentKalorien" />
   </fragment>
   <fragment
       android:id="@+id/fragmentRecycler"
@@ -182,6 +185,15 @@
         app:argType="string" />
     <action
         android:id="@+id/action_fragmentVideoDay_to_startFragment"
+        app:destination="@id/startFragment" />
+  </fragment>
+  <fragment
+      android:id="@+id/fragmentKalorien"
+      android:name="com.example.mywourkout.ui.FragmentKalorien"
+      tools:layout="@layout/fragment_kalorien"
+      android:label="FragmentKalorien" >
+    <action
+        android:id="@+id/action_fragmentKalorien_to_startFragment"
         app:destination="@id/startFragment" />
   </fragment>
 </navigation>
